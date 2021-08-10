@@ -1,0 +1,36 @@
+.content {
+    flex-direction: column;
+    flex-wrap: wrap;
+    p {
+        position: relative;
+        z-index: 200;
+        text-shadow: 0 0 3px #96bfce, 0 0 7px #fff;
+    }
+}
+
+.lawyer {
+    width: 150px;
+    align-self: flex-end;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+@media (min-width: 720px) {
+    .content {
+        flex-direction: row;
+        justify-content: center;
+        min-height: inherit;
+        p {
+            max-width: 750px;
+            min-width: 500px;
+        }
+        h3 {
+            margin: 0;
+        }
+    }
+    .lawyer {
+        width: 300px;
+        position: relative;
+        left: 15vw;
+        top: 3vh;
+    }
+}

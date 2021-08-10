@@ -1,0 +1,43 @@
+.content {
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 200;
+    p {
+        text-shadow: 0 0 3px var(--aqua), 0 0 7px var(--darkBlue);
+    }
+}
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 100px;
+    }
+}
+
+.bell {
+    width: 200px;
+    z-index: -1;
+    position: absolute;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+@media (min-width: 500px) {
+    .bell {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .content {
+        flex-wrap: nowrap;
+        p {
+            max-width: 1000px;
+        }
+        .bell {
+            width: 300px;
+            left: 10px;
+        }
+    }
+}

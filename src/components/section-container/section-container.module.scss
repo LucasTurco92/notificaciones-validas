@@ -1,0 +1,69 @@
+.baseContainer {
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        font-size: 2em;
+        font-family: CormorantInfant;
+        margin-bottom: auto;
+    }
+    h2 {
+        font-size: 2em;
+        font-family: CormorantInfant;
+        margin-bottom: auto;
+    }
+    p {
+        font-size: 16px;
+        padding: 0 2vh;
+    }
+}
+
+.containerFirst {
+    @extend .baseContainer;
+    background-color: var(--white);
+    min-height: 100vh;
+}
+
+.containerThird {
+    @extend .baseContainer;
+    background-color: var(--blue);
+    min-height: 80vh;
+}
+
+.containerSecond {
+    @extend .baseContainer;
+    background-image: url('/images/galaxy-2.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 80vh;
+}
+
+.containerFourth {
+    @extend .baseContainer;
+    background-color: var(--darkBlue);
+    min-height: none;
+    background-image: url('/images/galaxy-2.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media (min-width: 1000px) {
+    .baseContainer {
+        min-height: 90vh;
+    }
+}
+
+@media ( min-width: 720px) {
+    .baseContainer {
+        p {
+            font-size: 2vh;
+        }
+    }
+}

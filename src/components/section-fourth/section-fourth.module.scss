@@ -1,0 +1,51 @@
+.content {
+    flex-wrap: wrap;
+    flex-direction: row;
+    p {
+        max-width: width 500px;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    ul {
+        text-shadow: 0 0 3px #fff, 0 0 7px #fff;
+        list-style: none;
+    }
+}
+
+.contact {
+    display: none;
+}
+
+.hermes {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .content {
+        p {
+            min-width: width 500px;
+        }
+        h3 {
+            font-size: 3em;
+        }
+        margin-bottom: 2vh;
+        ul {
+            font-size: 2.5vh;
+        }
+    }
+    .hermes {
+        align-self: flex-end;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+    }
+}
+
+@media (min-width: 720px) {
+    .hermes {
+        height: 100px;
+        display: inline;
+        position: absolute;
+        right: 20px
+    }
+}
