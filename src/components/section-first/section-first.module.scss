@@ -32,10 +32,6 @@
         background-color: black;
         background-repeat: no-repeat;
         background-image: url('/images/hand-shake-1.jpg');
-        &::after {
-            content: "";
-            background-image: url('/images/hand-shake-1.jpg');
-        }
     }
 }
 
@@ -52,12 +48,13 @@
         margin-top: 0;
         .coverImage {
             max-width: 90%;
-            font-size: 7vw;
+            font-size: 3vw;
             padding: 0;
         }
     }
     .itemsContainer {
         align-self: center;
+        justify-content: center;
     }
 }
 
@@ -85,7 +82,7 @@
         }
         .coverImage {
             .legend {
-                font-size: 3vw;
+                font-size: 2vw;
             }
         }
     }

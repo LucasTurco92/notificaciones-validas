@@ -1,20 +1,48 @@
 .content {
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 10vh;
     p {
         position: relative;
         z-index: 200;
-        text-shadow: 0 0 3px #96bfce, 0 0 7px #fff;
     }
 }
 
-.lawyer {
-    width: 150px;
-    align-self: flex-end;
-    filter: drop-shadow(5px 5px 5px #222);
+.bell {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.item {
+    margin-top: 10vh;
+}
+
+.image {
+    flex-grow: 0;
+    max-width: 100%;
+    flex-basis: 50%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 0;
+    max-width: 80%;
 }
 
 @media (min-width: 720px) {
+    .image {
+        flex-grow: 0;
+        max-width: 50%;
+        flex-basis: 50%;
+    }
+    .box {
+        display: flex;
+        flex-direction: row;
+        margin: 5vh 0;
+        max-width: 90%;
+    }
     .content {
         flex-direction: row;
         justify-content: center;
