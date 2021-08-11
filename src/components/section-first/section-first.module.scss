@@ -22,10 +22,12 @@
         background-size: 1000% 100%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: animateTitle 12s linear infinite;
+        animation: animateTitle 12s linear infinite both;
     }
     .coverImage {
         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         background-attachment: fixed;
         background-size: 80%;
