@@ -7,8 +7,9 @@ const SectionFirst = () => {
     const ref = useScroll();
 
     return (
-        <SectionContainer className={styles.containerFirst}  color={'containerFirst'} show={false}> 
-            <div  id={'intro'} className={styles.content}>
+        <SectionContainer id={'intro'} className={styles.containerFirst}  color={'containerFirst'} show={false}> 
+            <div className={styles.cover}>
+                <img className={styles.coverUp} src={'/images/galaxy-2.jpg'} />
                 <div className={styles.coverImageContainer}>
                     <h2 className={styles.title}>Notificaciones Válidas</h2>        
                     <div className={styles.coverImage}>
@@ -16,6 +17,7 @@ const SectionFirst = () => {
                     </div>
                 </div>   
             </div>
+        
             <div className={styles.itemsContainer}>
                 <Cards/>
             </div>

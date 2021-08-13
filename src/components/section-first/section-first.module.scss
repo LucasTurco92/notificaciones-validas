@@ -6,8 +6,21 @@
     flex-wrap: wrap;
 }
 
+.coverUp {
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+}
+
+.cover {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
 .coverImageContainer {
-    margin-top: 50px;
+    z-index: 1;
     font-size: 7vw;
     text-transform: uppercase;
     font-weight: bold;
@@ -23,17 +36,13 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: animateTitle 12s linear infinite both;
+        display: block;
     }
     .coverImage {
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-attachment: fixed;
-        background-size: 80%;
-        background-color: black;
-        background-repeat: no-repeat;
-        background-image: url('/images/hand-shake-1.jpg');
+        .legend {
+            font-size: 3.5vw;
+            color: var(--specialWhite);
+        }
     }
 }
 
@@ -43,12 +52,29 @@
 }
 
 @media (min-width: 800px) {
+    .coverUp {
+        display: none;
+    }
+    .cover {
+        align-items: flex-end;
+    }
     .content {
         flex-direction: row;
     }
     .coverImageContainer {
+        font-size: 6vw;
         margin-top: 0;
         .coverImage {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-attachment: fixed;
+            -webkit-background-attachment: fixed;
+            background-size: 80%;
+            background-color: black;
+            background-repeat: no-repeat;
+            background-image: url('/images/hand-shake-1.jpg');
             max-width: 90%;
             font-size: 3vw;
             padding: 0;
@@ -70,7 +96,7 @@
         .coverImage {
             background-size: 65%;
             .legend {
-                font-size: 4.5vw;
+                font-size: 2vw;
             }
         }
     }
@@ -81,11 +107,6 @@
         max-width: 75%;
         .title {
             font-size: 5.5vw;
-        }
-        .coverImage {
-            .legend {
-                font-size: 2vw;
-            }
         }
     }
 }

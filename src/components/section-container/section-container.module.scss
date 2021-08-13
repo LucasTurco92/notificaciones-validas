@@ -26,7 +26,6 @@
 .containerFirst {
     @extend .baseContainer;
     background-color: var(--white);
-    min-height: 100vh;
 }
 
 .containerThird {
