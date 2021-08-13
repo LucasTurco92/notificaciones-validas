@@ -9,14 +9,16 @@
 .coverUp {
     width: 100%;
     position: absolute;
+    -webkit-object-fit: cover;
     object-fit: cover;
     height: 100%;
+    object-position: right;
 }
 
 .cover {
     min-height: 100vh;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .coverImageContainer {
@@ -37,6 +39,7 @@
         -webkit-text-fill-color: transparent;
         animation: animateTitle 12s linear infinite both;
         display: block;
+        align-self: center;
     }
     .coverImage {
         .legend {
@@ -44,11 +47,6 @@
             color: var(--specialWhite);
         }
     }
-}
-
-.itemsContainer {
-    display: flex;
-    min-width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -79,10 +77,6 @@
             font-size: 3vw;
             padding: 0;
         }
-    }
-    .itemsContainer {
-        align-self: center;
-        justify-content: center;
     }
 }
 

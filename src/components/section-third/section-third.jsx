@@ -9,6 +9,9 @@ const SectionThird = () => {
     return (
       <SectionContainer color={'containerThird'} show={true}>
         <div id={'mision'} className={`${common.content} ${styles.content}`}>
+             {/* <div className={styles.itemsContainer}>
+                <Cards/>
+            </div> */}
           <div className={styles.box}>
             <div className={styles.image}>
               <img className={styles.bell} src={'/images/hand-shake-1.jpg'} />

@@ -17,10 +17,6 @@ const SectionFirst = () => {
                     </div>
                 </div>   
             </div>
-        
-            <div className={styles.itemsContainer}>
-                <Cards/>
-            </div>
         </SectionContainer>
     )
 }
