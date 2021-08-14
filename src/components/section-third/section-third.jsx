@@ -2,6 +2,7 @@ import SectionContainer from "../section-container/section-container";
 import styles from "./section-third.module.scss";
 import common from '../section-container/section-container.module.scss';
 import useScroll from '../../hooks/scroll.js';
+import Cards from '../cards/cards';
 
 const SectionThird = () => {
   const ref = useScroll();
@@ -9,7 +10,7 @@ const SectionThird = () => {
     return (
       <SectionContainer color={'containerThird'} show={true}>
         <div id={'mision'} className={`${common.content} ${styles.content}`}>
-             {/* <div className={styles.itemsContainer}>
+             {/* <div className={styles.cardsContainer}>
                 <Cards/>
             </div> */}
           <div className={styles.box}>

@@ -51,10 +51,7 @@
 
 @media (min-width: 800px) {
     .coverUp {
-        display: none;
-    }
-    .cover {
-        align-items: flex-end;
+        object-position: top;
     }
     .content {
         flex-direction: row;
@@ -63,16 +60,8 @@
         font-size: 6vw;
         margin-top: 0;
         .coverImage {
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-attachment: fixed;
-            -webkit-background-attachment: fixed;
-            background-size: 80%;
-            background-color: black;
+            color: var(--specialWhite);
             background-repeat: no-repeat;
-            background-image: url('/images/hand-shake-1.jpg');
             max-width: 90%;
             font-size: 3vw;
             padding: 0;

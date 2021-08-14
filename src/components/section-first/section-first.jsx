@@ -1,7 +1,6 @@
 import SectionContainer from "../section-container/section-container";
 import styles from './section-first.module.scss';
 import useScroll from '../../hooks/scroll.js';
-import Cards from '../cards/cards';
 
 const SectionFirst = () => {
     const ref = useScroll();
