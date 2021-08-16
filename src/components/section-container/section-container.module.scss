@@ -19,7 +19,6 @@
     }
     p {
         font-size: 16px;
-        padding: 0 2vh;
     }
 }
 
@@ -54,13 +53,5 @@
     }
     .containerSecond {
         min-height: 0;
-    }
-}
-
-@media ( min-width: 720px) {
-    .baseContainer {
-        p {
-            font-size: 2vh;
-        }
     }
 }
