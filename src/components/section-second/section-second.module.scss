@@ -2,13 +2,14 @@
     flex-wrap: wrap;
     flex-direction: row;
     z-index: 200;
+    padding: 5vh 0 0;
     font-size: 4vh;
     align-items: center;
     justify-content: center;
     background: black;
     color: white;
     p {
-        max-width: 500px;
+        max-width: 80%;
         padding: 2vh 0;
     }
 }
@@ -29,16 +30,17 @@
 .bell {
     width: 80%;
     position: relative;
-    top: 20px;
-    border: 1px solid white;
+    top: 35px;
+    border: 3px solid white;
     background-color: white;
 }
 
 @media (min-width: 1000px) {
     .content {
-        padding: 10vh 0;
         flex-wrap: nowrap;
         align-items: center;
+        justify-content: space-between;
+        padding: 0;
         .box {
             flex-wrap: wrap;
             flex-direction: row;
@@ -48,7 +50,8 @@
             padding: 1%;
         }
         .bell {
-            width: 300px;
+            border: 1px solid white;
+            width: 50%;
             left: 10px;
         }
     }
