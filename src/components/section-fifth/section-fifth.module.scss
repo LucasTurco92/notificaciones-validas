@@ -1,0 +1,33 @@
+.content {
+    flex-wrap: wrap;
+    flex-direction: row;
+    p {
+        max-width: width 500px;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    ul {
+        text-shadow: 0 0 3px #fff, 0 0 7px #fff;
+        list-style: none;
+    }
+}
+
+.contact {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .content {
+        p {
+            min-width: width 500px;
+        }
+        h3 {
+            font-size: 3em;
+        }
+        margin-bottom: 2vh;
+        ul {
+            font-size: 2.5vh;
+        }
+    }
+}

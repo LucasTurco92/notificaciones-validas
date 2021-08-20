@@ -9,19 +9,14 @@ const SectionSecond = () => {
   return (
       <SectionContainer  color={'containerSecond'} show={true}>
         <div id={'quienes'}  className={`${common.content} ${styles.content}`}>
-     
           <div className={styles.box}>
-            <b>Nuestra Propuesta</b>
-
+            <b>Nosotros proponemos</b>
             <p>
-              Olvídate de firmar un acuerdo presencialmente, o notificar una decisión por medio de documentos físicos, o no saber si el destinatario recibe la notificación.
+              Somos un equipo que ha desarrollado la primer plataforma para notificar en forma digital de manera simple, comprobable y legal entre partes.
             </p>
           </div>
-
           <img className={styles.bell} src={'/images/hand-shake-1.jpg'} />
-          </div>
-          
-
+        </div>
       </SectionContainer>
   )
 }

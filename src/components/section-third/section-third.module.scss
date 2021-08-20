@@ -1,7 +1,7 @@
 .content {
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 16vh;
+    padding: 8vh 0 0 1vw;
     p {
         position: relative;
         z-index: 200;
@@ -13,10 +13,9 @@
     margin-top: 10vh;
 }
 
-.image {
-    flex-grow: 0;
-    max-width: 100%;
-    flex-basis: 50%;
+.imageContract {
+    max-width: 50vw;
+    margin: 3vh auto;
 }
 
 .box {
@@ -24,8 +23,19 @@
     max-width: 80%;
 }
 
+.title {
+    font-weight: bold;
+    border-bottom: 1px dotted black;
+}
+
 .text {
     margin: 0;
+}
+
+.mainTitle {
+    flex: 0 1 100%;
+    font-size: 6vh;
+    margin: 6vh;
 }
 
 @media (min-width: 600px) {
@@ -39,18 +49,40 @@
         flex-basis: 50%;
     }
     .box {
-        margin: 2vh 0;
-        max-width: 25%;
-        min-width: 275px;
+        max-width: 50%;
     }
     .content {
         flex-direction: row;
         align-items: normal;
+        padding: 8vh 0 0 5vw;
         p {
-            font-size: 12px;
+            font-size: 16px;
         }
         h3 {
             margin: 0;
         }
+    }
+    .imageContract {
+        max-height: 40vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .box {
+        max-width: 33%;
+        min-width: 330px;
+    }
+    .imageContract {
+        position: absolute;
+        max-height: 30vw;
+        right: 5%;
+        z-index: 1;
+        top: 40%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .imageContract {
+        top: 33%;
     }
 }

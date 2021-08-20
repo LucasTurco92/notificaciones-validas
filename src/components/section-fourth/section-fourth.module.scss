@@ -21,7 +21,32 @@
     display: none;
 }
 
+.customShapeDividerBottom {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    svg {
+        position: relative;
+        display: block;
+        width: calc(152% + 1.3px);
+        height: 98px;
+    }
+    .shapeFill {
+        fill: var(--specialBlack);
+    }
+}
+
+.title {
+    font-size: 6vh;
+    text-align: center;
+}
+
 @media (min-width: 1000px) {
+    .title {
+        font-size: 10vh;
+    }
     .content {
         p {
             min-width: width 500px;
@@ -33,6 +58,9 @@
         ul {
             font-size: 2.5vh;
         }
+    }
+    .customShapeDividerBottom {
+        position: absolute;
     }
     .hermes {
         align-self: flex-end;
