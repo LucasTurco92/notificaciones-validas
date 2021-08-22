@@ -1,0 +1,32 @@
+.customShapeDividerBottom {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    svg {
+        position: relative;
+        display: block;
+        width: calc(152% + 1.3px);
+        height: 98px;
+    }
+    .shapeFill {
+        fill: var(--specialBlack);
+    }
+}
+
+.shapeFillSpecialWhite {
+    fill: var(--specialWhite);
+}
+
+.shapeFillSpecialBlack {
+    fill: var(--specialBlack);
+}
+
+.shapeSolidBlack {
+    fill: var(--black);
+}
+
+.shapeSolidWhite {
+    fill: var(--white);
+}

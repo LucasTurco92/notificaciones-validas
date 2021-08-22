@@ -35,18 +35,18 @@
     min-height: 0;
 }
 
+.containerMission {
+    @extend .baseContainer;
+    min-height: 0;
+}
+
 .containerFourth {
     @extend .baseContainer;
 }
 
 .containerFifth {
     @extend .baseContainer;
-    background-color: var(--darkBlue);
-    min-height: none;
-    background-image: url('/images/writer.jpg');
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-color: var(--purple);
 }
 
 @media (min-width: 1000px) {
@@ -54,13 +54,12 @@
         min-height: 90vh;
     }
     .containerSecond {
-        min-height: 70vh;
-        background: black;
-        padding: 20vh 0;
+        background: var(--black);
+        min-height: 0;
+        padding: 10vh 0;
     }
     .containerFourth {
         min-height: 70vh;
-        background: var(--White);
-        padding: 10vh 0 0;
+        background: var(--white);
     }
 }

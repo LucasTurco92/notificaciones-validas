@@ -14,7 +14,7 @@ const [ sources, setSources ] = useState([
         <div className={styles.cardsContainer}>
             {
             sources.map(card =>{
-               return <Card path={card.path} text={card.text} title={card.title} />
+               return <Card path={card.path} text={card.text} key={card.title} title={card.title} />
             })
         }
         </div>

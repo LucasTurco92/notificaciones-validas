@@ -3,6 +3,7 @@ import styles from "./section-third.module.scss";
 import common from '../section-container/section-container.module.scss';
 import useScroll from '../../hooks/scroll.js';
 import { useState } from 'react';
+import SeparatorTop from "../separator-top/separator-top";
 
 const SectionThird = () => {
   const [boxes, setBoxes]= useState([
@@ -31,6 +32,7 @@ const SectionThird = () => {
 
     return (
       <SectionContainer color={'containerThird'} show={true}>
+        <SeparatorTop showMobile={false} color={'specialBlack'}/>
         <div id={'mision'} className={`${common.content} ${styles.content}`}>      
           <h2 className={styles.mainTitle}>¿Cómo funciona?</h2>
           {
@@ -43,7 +45,7 @@ const SectionThird = () => {
             </div>
           ))
           }
-          <img className={styles.imageContract} src={'/images/contract-5.png'} />
+          <img className={styles.imageContract} src={'/images/universe-4.svg'} />
         </div>
     </SectionContainer>
     )

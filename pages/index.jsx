@@ -3,8 +3,9 @@ import Nav from "../src/components/nav/nav";
 import SectionFirst from "../src/components/section-first/section-first.jsx";
 import SectionSecond from "../src/components/section-second/section-second.jsx";
 import SectionThird from "../src/components/section-third/section-third.jsx";
-import SectionFourth from "../src/components/section-fourth/section-fourth.jsx";
-import SectionFifth from "../src/components/section-fifth/section-fifth.jsx";
+import SectionVantages from "../src/components/section-vantages/section-vantages.jsx";
+import SectionFooter from "../src/components/section-footer/section-footer.jsx";
+import SectionMission from "../src/components/section-mission/section-mission.jsx";
 import styles from './home/home.module.scss';
 export default function Home() {
 
@@ -14,9 +15,10 @@ export default function Home() {
       <Nav/>
       <SectionFirst/>
       <SectionSecond/>
-      <SectionFourth/>
+      <SectionVantages/>
       <SectionThird/>
-      <SectionFifth/>
+      <SectionMission/>
+      <SectionFooter/>
     </div>
   )
 }

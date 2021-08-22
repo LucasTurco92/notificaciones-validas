@@ -16,6 +16,7 @@
 .imageContract {
     max-width: 50vw;
     margin: 3vh auto;
+    z-index: 1;
 }
 
 .box {
@@ -34,7 +35,7 @@
 
 .mainTitle {
     flex: 0 1 100%;
-    font-size: 6vh;
+    font-size: 5vh;
     margin: 6vh;
 }
 
@@ -78,11 +79,5 @@
         right: 5%;
         z-index: 1;
         top: 40%;
-    }
-}
-
-@media (min-width: 1600px) {
-    .imageContract {
-        top: 33%;
     }
 }

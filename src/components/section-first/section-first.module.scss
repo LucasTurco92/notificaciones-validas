@@ -21,10 +21,6 @@
     align-items: center;
 }
 
-.customShapeDividerBottom {
-    display: none;
-}
-
 .coverImageContainer {
     z-index: 1;
     font-size: 7vw;
@@ -69,26 +65,6 @@
             max-width: 90%;
             font-size: 3vw;
             padding: 0;
-        }
-    }
-    .customShapeDividerBottom {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-        svg {
-            position: relative;
-            display: block;
-            width: calc(152% + 1.3px);
-            height: 98px;
-            transform: rotateY(180deg);
-        }
-        .shapeFill {
-            fill: var(--specialWhite);
         }
     }
 }

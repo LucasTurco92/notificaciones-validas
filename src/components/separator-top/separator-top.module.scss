@@ -1,0 +1,42 @@
+.shapeDividerBottom {
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+        position: relative;
+        display: block;
+        width: calc(152% + 1.3px);
+        height: 98px;
+        transform: rotateY(180deg);
+    }
+    .shapeFill {
+        fill: var(--specialWhite);
+    }
+}
+
+.shapeFillSpecialWhite {
+    fill: var(--specialWhite);
+}
+
+.shapeFillSpecialBlack {
+    fill: var(--specialBlack);
+}
+
+.shapeSolidBlack {
+    fill: var(--black);
+}
+
+.shapeSolidWhite {
+    fill: var(--white);
+}
+
+@media (max-width: 800px) {
+    .hideMobile {
+        display: none;
+    }
+}

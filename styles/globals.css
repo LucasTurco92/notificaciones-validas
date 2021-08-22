@@ -30,7 +30,8 @@ p {
     --specialBlack: RGBA(0, 0, 0, 0.6);
     --specialWhite: RGBA(255, 255, 255, 0.6);
     --darkBlue: #515463;
+    --purple: #50466d;
     --white: #fff;
     --aqua: #96bfce;
-    --black: #000000;
+    --black: #1D1C1A;
 }

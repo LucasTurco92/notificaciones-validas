@@ -1,24 +1,29 @@
 .content {
-    flex-wrap: wrap;
-    flex-direction: row;
-    z-index: 200;
-    font-size: 4vh;
+    width: 100%;
+    position: relative;
     align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    z-index: 0;
+    min-height: 0;
+    font-size: 4vh;
     justify-content: center;
     background: var(--black);
     color: var(--white);
-    .title {
-        font-size: 1em;
-        font-family: inherit;
-    }
     p {
         color: var(--specialWhite);
+        font-size: 16px;
     }
 }
 
 .box {
     margin: 1%;
     padding: 0 10%;
+    .title {
+        text-align: center;
+        font-size: 1em;
+    }
 }
 
 .text {
@@ -29,25 +34,18 @@
     }
 }
 
-.bar {
-    height: 100px;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(29, 28, 26, 1) 100%);
-}
-
 .bell {
-    max-width: 80%;
+    display: none;
 }
 
 @media (min-width: 1000px) {
     .content {
         flex-wrap: nowrap;
         align-items: center;
+        justify-content: space-evenly;
         padding: 0;
-        .title {
-            font-size: .5em;
-        }
+        min-height: 70vh;
+        background: var(--black);
         .box {
             flex-wrap: wrap;
             flex-direction: row;
@@ -56,17 +54,17 @@
             align-items: center;
             padding-left: 2%;
             margin: 0;
+            max-width: 70%;
+            .title {
+                margin-bottom: 0;
+            }
         }
         .bell {
             display: block;
             border: none;
-            width: 35%;
+            width: 10%;
             left: 10px;
             top: 0;
-            margin-right: 5vh;
         }
-    }
-    .bar {
-        display: none;
     }
 }
