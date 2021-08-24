@@ -1,7 +1,6 @@
 .content {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
-    background-color: var(--specialBlack);
     p {
         max-width: width 500px;
     }
@@ -33,5 +32,8 @@
         ul {
             font-size: 2.5vh;
         }
+    }
+    .window {
+        width: 10%;
     }
 }

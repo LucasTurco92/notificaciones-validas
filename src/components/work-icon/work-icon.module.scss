@@ -1,0 +1,9 @@
+.icon {
+    height: 20px;
+}
+
+@media (min-width: 600px) {
+    .icon {
+        height: 25px;
+    }
+}

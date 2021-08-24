@@ -46,7 +46,7 @@
 
 .containerFifth {
     @extend .baseContainer;
-    background-color: var(--purple);
+    background-color: var(--violet);
 }
 
 @media (min-width: 1000px) {
@@ -61,5 +61,8 @@
     .containerFourth {
         min-height: 70vh;
         background: var(--white);
+    }
+    .containerFifth {
+        min-height: 0;
     }
 }

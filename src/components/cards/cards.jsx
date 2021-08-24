@@ -4,10 +4,10 @@ import Card from '../card/card';
 
 const Cards = () =>{
 const [ sources, setSources ] = useState([
-        { path:'/images/contract-1.jpg',text:'Ya no es necesario tener que trasladarte para firmar un acuerdo o iniciar un trámite.',title:'Practicidad' },
-        { path:'/images/security-4.jpg',text:'Podes enviar o recibir una notificación dentro de un marco legal.',title:'SEGURIDAD' },
-        { path:'/images/hand-shake-2.jpg', text:'Almacenamiento de documentos para usarlos cuando se necesiten.',title:'DISPONIBILIDAD' },
-        { path:'/images/real-time-1.jpg',text:'Información segura y confiable en tiempo real.',title:'VELOCIDAD' }
+        { path:'/images/sign-1.svg',text:'Ya no es necesario tener que trasladarte para firmar un acuerdo o iniciar un trámite.',title:'Practicidad' },
+        { path:'/images/security-1.svg',text:'Podes enviar o recibir una notificación dentro de un marco legal.',title:'SEGURIDAD' },
+        { path:'/images/disponibility-1.svg', text:'Almacenamiento de documentos para usarlos cuando se necesiten.',title:'DISPONIBILIDAD' },
+        { path:'/images/time-2.svg',text:'Información segura y confiable en tiempo real.',title:'VELOCIDAD' }
     ]);
 
     return(

@@ -20,7 +20,7 @@ const SectionFooter = () => {
           Lorem Ipsum S.A
           </li>
         </ul>
-      <img className={styles.window} src={'/images/window-1.svg'} />
+        <img className={styles.window} src={'/images/window-1.svg'} />
       </div>
     </SectionContainer>
     )

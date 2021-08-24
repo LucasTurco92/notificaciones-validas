@@ -2,7 +2,6 @@ import SectionContainer from "../section-container/section-container";
 import styles from "./section-second.module.scss";
 import common from '../section-container/section-container.module.scss';
 import useScroll from '../../hooks/scroll.js';
-import SeparatorBottom from "../separator-bottom/separator-bottom";
 
 const SectionSecond = () => {
   const ref = useScroll();
@@ -10,7 +9,6 @@ const SectionSecond = () => {
   return (
       <SectionContainer  color={'containerSecond'} show={true}>
         <div id={'quienes'}  className={`${common.content} ${styles.content}`}>
-          <div className={styles.bar}/>
           <div className={styles.box}>
             <h2 className={styles.title} >Nosotros proponemos</h2>
             <p>

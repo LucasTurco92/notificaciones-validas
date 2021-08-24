@@ -24,11 +24,13 @@
 .title {
     font-size: 6vh;
     text-align: center;
+    font-family: CormorantInfant;
 }
 
 @media (min-width: 1000px) {
     .title {
-        font-size: 10vh;
+        font-size: 5vh;
+        margin: 6vh;
     }
     .content {
         p {

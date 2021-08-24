@@ -29,9 +29,12 @@ p {
     --specialBlue: RGBA(0, 153, 255, 0.52);
     --specialBlack: RGBA(0, 0, 0, 0.6);
     --specialWhite: RGBA(255, 255, 255, 0.6);
+    --fogBlack: RGBA(0, 0, 0, 0);
     --darkBlue: #515463;
+    --violet: #201c2c;
     --purple: #50466d;
     --white: #fff;
     --aqua: #96bfce;
     --black: #1D1C1A;
+    --solidBlack: #000;
 }

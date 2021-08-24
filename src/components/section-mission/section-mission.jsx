@@ -11,7 +11,7 @@ const SectionMission = () => {
             Crear una plataforma que otorgue VALOR LEGAL a un medio electrónico, de forma rápida, segura y eficaz permitiendo ahorrar tiempo y dinero, evitando problemas legales por el uso de correos electrónicos. NUNCA FUE TAN FACIL, EFICAZ Y ECONÓMICO NOTIFICAR UNA DECISIÓN.
             </p>
           </div>
-          <img className={styles.bell} src={'/images/notification.png'} />
+          <img className={styles.bell} src={'/images/bell-solid.svg'} />
         </div>
 
   )

@@ -5,7 +5,8 @@
     font-size: 4vh;
     align-items: center;
     justify-content: center;
-    background: var(--black);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(29, 28, 26, 1) 100%);
     color: var(--white);
     .title {
         font-size: 1em;
@@ -29,21 +30,15 @@
     }
 }
 
-.bar {
-    height: 100px;
-    width: 100%;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(29, 28, 26, 1) 100%);
-}
-
 .bell {
     max-width: 80%;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
     .content {
         flex-wrap: nowrap;
         align-items: center;
+        background: var(--black);
         padding: 0;
         .title {
             font-size: .5em;
