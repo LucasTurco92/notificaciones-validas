@@ -8,7 +8,7 @@ const SectionSecond = () => {
   
   return (
       <SectionContainer  color={'containerSecond'} show={true}>
-        <div id={'quienes'}  className={`${common.content} ${styles.content}`}>
+        <div id={'propuesta'}  className={`${common.content} ${styles.content}`}>
           <div className={styles.box}>
             <h2 className={styles.title} >Nosotros proponemos</h2>
             <p>

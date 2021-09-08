@@ -2,7 +2,7 @@ import styles from './nav.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
 const Nav =()=>{
-    const [ menuStatus,setMenuStatus ] = useState(styles.navInitialClose);
+    const [ menuStatus,setMenuStatus ] = useState(styles.navClose);
     const [ menuOpen,setMenuOpen ] = useState(false);
     const handleMenuStatus=()=>{
         setMenuStatus(()=>{
@@ -13,15 +13,22 @@ const Nav =()=>{
 
     return(
     <div className={styles.navContainer}>
-        <div onClick={()=>handleMenuStatus()}><img className={styles.bars} src={'icons/bars.svg'} /></div>
-        <ul className={styles.nav}>
+        <div onClick={()=>handleMenuStatus()}>
+        {
+            menuOpen ? <img className={styles.bars} src={'icons/cancel.svg'}/>
+            :   <img className={styles.bars} src={'icons/bars.svg'}/>
+        }
             <div className={menuStatus}>
-                <li><Link href="#intro" >Intro</Link></li>
-                <li><Link href="#quienes">Quienes Somos?</Link></li>
-                <li><Link href="#mision" >Mision</Link></li>
-                <li><Link href="#contacto" >Contacto</Link></li>
+                <ul className={styles.nav}>
+                <Link href="#intro" ><li className={styles.item}>Intro</li></Link>
+                    <Link href="#propuesta"><li className={styles.item}>Propuesta</li></Link>
+                    <Link href="#vantages" ><li className={styles.item}>Ventajas</li></Link>
+                    <Link href="#howItWork" ><li className={styles.item}>Cómo funciona?</li></Link>
+                    <Link href="#mission" ><li className={styles.item}>Misión</li></Link>
+                    <Link href="#contacto" ><li className={styles.item}>Contacto</li></Link>
+                </ul>
             </div>
-        </ul>
+        </div>
     </div>
     )
 }

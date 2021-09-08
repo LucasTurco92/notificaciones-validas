@@ -1,7 +1,7 @@
 .content {
     flex-wrap: wrap;
     flex-direction: row;
-    z-index: 200;
+    z-index: 50;
     font-size: 4vh;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@
         .box {
             flex-wrap: wrap;
             flex-direction: row;
-            z-index: 200;
+            z-index: 50;
             font-size: 6vw;
             align-items: center;
             padding-left: 2%;

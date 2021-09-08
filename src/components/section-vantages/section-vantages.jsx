@@ -7,7 +7,7 @@ import Cards from '../cards/cards';
 const SectionVantages = () => {
 
     return (
-    <SectionContainer color={'containerFourth'} show={true}>
+    <SectionContainer id={'vantages'} color={'containerFourth'} show={true}>
       <SeparatorBottom show={true} color={'specialBlack'}/> 
       <h2 className={styles.title}>Ventajas</h2>
       <div className={styles.cardsContainer}>

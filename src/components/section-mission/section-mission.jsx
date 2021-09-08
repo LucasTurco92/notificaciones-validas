@@ -4,7 +4,7 @@ const SectionMission = () => {
   const ref = useScroll();
   
   return (
-        <div id={'quienes'}  className={styles.content}> 
+        <div id={'mission'}  className={styles.content}> 
           <div className={styles.box}>
             <h2 className={styles.title}>Misión</h2>
             <p>

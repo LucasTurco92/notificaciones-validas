@@ -25,7 +25,7 @@ p {
 }
 
 :root {
-    --blue: #4CAEFF;
+    --blue: #1f5ca7;
     --specialBlue: RGBA(0, 153, 255, 0.52);
     --specialBlack: RGBA(0, 0, 0, 0.6);
     --specialWhite: RGBA(255, 255, 255, 0.6);
@@ -37,4 +37,9 @@ p {
     --aqua: #96bfce;
     --black: #1D1C1A;
     --solidBlack: #000;
+    --specialViolet: rgba(32, 28, 44, .6);
+}
+
+h2 {
+    color: var(--blue);
 }
