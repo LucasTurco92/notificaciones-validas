@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Header/>
-      {/* <Nav/> */}
       <SectionFirst/>
       <SectionSecond/>
       <SectionVantages/>

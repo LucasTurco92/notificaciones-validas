@@ -1,6 +1,8 @@
 $b: 1.5em;
 $blur: blur(9px);
 $rect: inset(0);
+$border:1.5px solid var(--specialBlue);
+$textShadow: 0px 0px 20px;
 .navContainer {
     display: absolute;
     font-weight: bold;
@@ -13,8 +15,6 @@ $rect: inset(0);
         right: 0;
         margin: 0;
         padding: 100px;
-        display: flex;
-        flex-direction: column;
         background-image: url('/images/galaxy-2.jpg');
         background-size: 100%;
         background-repeat: no-repeat;
@@ -52,6 +52,7 @@ $rect: inset(0);
         padding: 10px 20px;
         font-weight: bold;
         text-align: center;
+        text-shadow: $textShadow var(--violet);
     }
     &:hover {
         font-family: CormorantInfant;
@@ -59,30 +60,21 @@ $rect: inset(0);
         text-transform: lowercase;
         cursor: pointer;
         color: var(--blue);
+        text-shadow: $textShadow var(--purple);
     }
 }
 
 .navOpen {
     display: block;
     width: 100%;
+    li {
+        border-right: $border;
+        &:nth-child(1) {
+            border-top: $border;
+        }
+    }
 }
 
 .navClose {
     display: none;
-}
-
-.bars {
-    margin: 50px;
-    height: 6em;
-    position: fixed;
-    padding: 1em;
-    right: 0;
-    z-index: 200;
-    width: 6em;
-    border-radius: 50px;
-    background-color: var(--white);
-    cursor: pointer;
-    &:hover {
-        background-color: var(--specialWhite);
-    }
 }

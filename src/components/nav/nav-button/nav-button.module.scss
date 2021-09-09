@@ -1,0 +1,33 @@
+$border:1.5px solid var(--specialBlue);
+$max:6em;
+.bars {
+    margin: 50px;
+    height: 16vw;
+    position: fixed;
+    padding: .6em;
+    right: -40px;
+    bottom: 0;
+    z-index: 200;
+    width: 16vw;
+    max-height: $max;
+    max-width: $max;
+    border-radius: 100%;
+    background-color: var(--violet);
+    cursor: pointer;
+    border: $border;
+    filter: drop-shadow(0px 0px 10px var(--darkBlue));
+}
+
+@media (min-width: 1280px) {
+    .bars {
+        height: $max;
+        padding: 1em;
+        right: 0;
+        top: 0;
+        z-index: 200;
+        width: $max;
+        &:hover {
+            background-color: var(--blue);
+        }
+    }
+}

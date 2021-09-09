@@ -1,7 +1,8 @@
-import styles from './nav.module.scss';
+import styles from './nav-desktop.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
-const Nav =()=>{
+import NavButton from '../nav-button/nav-button';
+const NavDesktop =()=>{
     const [ menuStatus,setMenuStatus ] = useState(styles.navClose);
     const [ menuOpen,setMenuOpen ] = useState(false);
     const handleMenuStatus=()=>{
@@ -15,12 +16,12 @@ const Nav =()=>{
     <div className={styles.navContainer}>
         <div onClick={()=>handleMenuStatus()}>
         {
-            menuOpen ? <img className={styles.bars} src={'icons/cancel.svg'}/>
-            :   <img className={styles.bars} src={'icons/bars.svg'}/>
+            menuOpen ? <NavButton src={'icons/cancel.svg'}/>
+            : <NavButton src={'icons/bars.svg'}/>
         }
             <div className={menuStatus}>
                 <ul className={styles.nav}>
-                <Link href="#intro" ><li className={styles.item}>Intro</li></Link>
+                    <Link href="#intro" ><li className={styles.item}>Intro</li></Link>
                     <Link href="#propuesta"><li className={styles.item}>Propuesta</li></Link>
                     <Link href="#vantages" ><li className={styles.item}>Ventajas</li></Link>
                     <Link href="#howItWork" ><li className={styles.item}>Cómo funciona?</li></Link>
@@ -33,4 +34,4 @@ const Nav =()=>{
     )
 }
 
-export default Nav;
+export default NavDesktop;

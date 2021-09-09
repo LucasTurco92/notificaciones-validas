@@ -1,7 +1,8 @@
-import styles from './nav-bubble.module.scss';
+import styles from './nav-mobile.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
-const NavBubble =()=>{
+import NavButton from '../nav-button/nav-button';
+const NavMobile =()=>{
     const [ menuStatus,setMenuStatus ] = useState(styles.navInitialClose);
     const [ menuOpen,setMenuOpen ] = useState(false);
     const handleMenuStatus=()=>{
@@ -10,10 +11,12 @@ const NavBubble =()=>{
         },setMenuOpen(!menuOpen));
     }
 
-
     return(
     <div className={styles.navContainer}>
-        <div onClick={()=>handleMenuStatus()}><img className={styles.bars} src={'icons/bars.svg'} /></div>
+        <div onClick={()=>handleMenuStatus()}>{
+            menuOpen ? <NavButton src={'icons/cancel.svg'}/>
+            :   <NavButton src={'icons/bars.svg'}/>
+        }</div>
         <ul className={styles.nav}>
             <div className={menuStatus}>
                 <li><Link href="#intro" >Intro</Link></li>
@@ -28,4 +31,4 @@ const NavBubble =()=>{
     )
 }
 
-export default NavBubble;
+export default NavMobile;
