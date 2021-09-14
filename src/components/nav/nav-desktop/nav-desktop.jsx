@@ -16,8 +16,8 @@ const NavDesktop =()=>{
     <div className={styles.navContainer}>
         <div onClick={()=>handleMenuStatus()}>
         {
-            menuOpen ? <NavButton src={'icons/cancel.svg'}/>
-            : <NavButton src={'icons/bars.svg'}/>
+            menuOpen ? <NavButton enabledAnimation={false} src={'icons/cancel.svg'}/>
+            : <NavButton enabledAnimation={!menuOpen} src={'icons/bars.svg'}/>
         }
             <div className={menuStatus}>
                 <ul className={styles.nav}>

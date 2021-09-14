@@ -1,7 +1,6 @@
 import SectionContainer from "../section-container/section-container";
 import styles from "./section-third.module.scss";
 import common from '../section-container/section-container.module.scss';
-import useScroll from '../../hooks/scroll.js';
 import { useState } from 'react';
 import SeparatorTop from "../separator-top/separator-top";
 import WorkIcon from "../work-icon/work-icon";
@@ -29,11 +28,6 @@ const SectionThird = () => {
       text:'Podrás incluso enviar y recibir honorarios dentro de la plataforma al instante y de manera certificada.'
     },
   ]);
-
-
-  const ref = useScroll();
-
-
 
     return (
       <SectionContainer color={'containerThird'} show={true}>

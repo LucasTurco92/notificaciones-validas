@@ -1,3 +1,5 @@
+$animation: .4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$animation-out: 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 $border:1.5px solid var(--specialBlue);
 $max:6em;
 .bars {
@@ -29,5 +31,59 @@ $max:6em;
         &:hover {
             background-color: var(--blue);
         }
+    }
+}
+
+.slide {
+    -webkit-animation: slide-out $animation-out both;
+    animation: slide-out $animation-out both;
+}
+
+.slideBack {
+    -webkit-animation: slide-back $animation both;
+    animation: slide-back $animation both;
+}
+
+@keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-back {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-back {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

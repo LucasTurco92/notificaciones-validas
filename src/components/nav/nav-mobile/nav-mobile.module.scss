@@ -1,6 +1,7 @@
-$animation-slide: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$animation-slide: .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 .font {
-    font-size: 16px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -8,7 +9,6 @@ $animation-slide: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     display: flex;
     position: absolute;
     flex-direction: column;
-    @extend .font;
     justify-content: space-between;
     width: 100%;
     top: 0;
@@ -18,27 +18,27 @@ $animation-slide: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
         right: 0;
         margin: 0;
         padding: 0;
-        transform: translateY(-50%);
         z-index: 1;
+        bottom: 16vh;
         width: 100%;
+        text-align: right;
         li {
+            @extend .font;
             display: block;
-            a {
-                display: block;
-                padding: 10px 20px;
-                text-transform: uppercase;
-                font-weight: bold;
-                text-align: center;
-            }
             &:hover {
                 color: var(--white);
+                background-color: var(--specialWhite);
             }
+            color: var(--white);
+            filter: drop-shadow(0px 0px 10px var(--darkBlue));
+            position: relative;
+            top: 50%;
         }
     }
 }
 
 .bars {
-    @extend .font;
+    font-size: 16px;
     height: 6vh;
     position: fixed;
     padding: .5vh 0;
@@ -60,16 +60,21 @@ $animation-slide: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     height: 100vh;
     @extend .open;
     li {
-        color: var(--blue);
+        color: var(--white);
+        filter: drop-shadow(0px 0px 10px var(--darkBlue));
         position: relative;
         top: 50%;
     }
 }
 
+.navSection {
+    display: block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
 .navClose {
-    height: 0;
-    opacity: 1;
-    @extend .close;
+    display: none;
 }
 
 .open {
@@ -78,8 +83,8 @@ $animation-slide: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .close {
-    -webkit-animation: slide-in-down $animation-slide reverse both;
-    animation: slide-in-down $animation-slide reverse both;
+    -webkit-animation: slide-out $animation-slide-out;
+    animation: slide-out $animation-slide-out;
 }
 
 @keyframes slide-in-top {
@@ -95,15 +100,20 @@ $animation-slide: 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     }
 }
 
-@keyframes slide-in-down {
+@-webkit-keyframes slide-out {
     0% {
-        -webkit-transform: translateY(-1000px);
-        transform: translateY(-1000px);
-        opacity: 0;
+        opacity: 1;
     }
     100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out {
+    0% {
         opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
