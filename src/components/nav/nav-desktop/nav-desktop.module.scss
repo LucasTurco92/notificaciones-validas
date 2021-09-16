@@ -1,3 +1,4 @@
+$animation-slide-in: .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 $b: 1.5em;
 $blur: blur(9px);
 $rect: inset(0);
@@ -71,8 +72,39 @@ $textShadow: 0px 0px 20px;
             border-top: $border;
         }
     }
+    position: relative;
+    @extend .open;
+    z-index: 100;
 }
 
 .navClose {
     display: none;
+}
+
+.open {
+    -webkit-animation: slide-out $animation-slide-in both;
+    animation: slide-out $animation-slide-in both;
+}
+
+.close {
+    -webkit-animation: slide-out $animation-slide-in reverse both;
+    animation: slide-out $animation-slide-in reverse both;
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

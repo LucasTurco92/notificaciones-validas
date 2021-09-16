@@ -1,25 +1,18 @@
 import styles from './nav-button.module.scss';
 import useScroll from '../../../hooks/scroll.js';
-import { useEffect,useState } from 'react';
+import { useState,useEffect } from 'react';
 
 const NavButton = ({ enabledAnimation,src })=>{
-    const { refY } = useScroll();
-    const [ prevY,setPrevY ] = useState(refY);
-    const ref = refY();
-    const[animation,setAnimation] =  useState();
+    const { offsetY } = useScroll();
+    const[ scrollDirectionDown,setScrollDirectionDown ] = useState();
+    const[ lastScrollDown,setLastScrollDown ] = useState();
+    
+    useEffect(()=>{
+        setScrollDirectionDown(lastScrollDown < offsetY);
+        setLastScrollDown(offsetY);
+    },[offsetY]);
 
-    useEffect(()=>{     
-        if(enabledAnimation){    
-            if(prevY < ref){
-                setAnimation(styles.slide);
-            }else{
-                setAnimation(styles.slideBack);
-            };
-        setPrevY(ref);
-       }
-    },[ref,enabledAnimation])
-   
-    return (<img className={`${styles.bars} ${animation}`} src={src}/>)
+    return (<img className={`${styles.bars} ${(enabledAnimation && scrollDirectionDown) ? styles.slide: styles.slideBack}`} src={src}/>)
 }
 
 export default NavButton;

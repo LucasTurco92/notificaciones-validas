@@ -1,5 +1,6 @@
 $animation-slide: .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-$animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$animation-hide: .2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$border:1.5px solid var(--specialBlue);
 .font {
     font-size: 1.5em;
     font-weight: bold;
@@ -19,7 +20,7 @@ $animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
         margin: 0;
         padding: 0;
         z-index: 1;
-        bottom: 16vh;
+        bottom: 30%;
         width: 100%;
         text-align: right;
         li {
@@ -63,14 +64,19 @@ $animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
         color: var(--white);
         filter: drop-shadow(0px 0px 10px var(--darkBlue));
         position: relative;
-        top: 50%;
     }
 }
 
+.navDescription {
+    margin-right: 15px;
+}
+
 .navSection {
-    display: block;
+    display: flex;
     padding: 10px 20px;
     text-transform: uppercase;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .navClose {
@@ -83,8 +89,8 @@ $animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .close {
-    -webkit-animation: slide-out $animation-slide-out;
-    animation: slide-out $animation-slide-out;
+    -webkit-animation: slide-hide $animation-hide;
+    animation: slide-hide $animation-hide;
 }
 
 @keyframes slide-in-top {
@@ -100,7 +106,7 @@ $animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     }
 }
 
-@-webkit-keyframes slide-out {
+@-webkit-keyframes slide-hide {
     0% {
         opacity: 1;
     }
@@ -109,7 +115,7 @@ $animation-slide-out: 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940);
     }
 }
 
-@keyframes slide-out {
+@keyframes slide-hide {
     0% {
         opacity: 1;
     }

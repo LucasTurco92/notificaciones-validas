@@ -1,19 +1,15 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 const DESKTOP_MIN = [1280, 720];
 
 const useResponsiveWindow = () => {
     const [width, setWidth] = useState('null');
     const [height, setHeight] = useState('null');
-    const resizeTimer = useRef(null);
 
     const handleWindowResize = useCallback((e) => {
-        clearTimeout(resizeTimer.current);
-        resizeTimer.current = setTimeout(() => {
             setWidth(window.innerWidth);
             setHeight(window.innerWidth);
-        }, 1000);
-    }, [setWidth, setHeight, resizeTimer]);
+    }, [setWidth, setHeight]);
     
     useEffect(() => {
         setWidth(window.innerWidth);

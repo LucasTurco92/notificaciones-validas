@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useScroll = () => {
     const [offsetY, setOffsetY] = useState(0);
+
     const handleScroll = () => {
         setOffsetY(window.pageYOffset);
     };
@@ -10,12 +11,9 @@ const useScroll = () => {
         window.addEventListener('scroll', handleScroll);
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    });
 
-    const refY = () => offsetY;
-
-
-    return { refY };
+    return { offsetY };
 }
 
 export default useScroll;

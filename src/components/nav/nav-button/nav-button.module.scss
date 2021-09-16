@@ -4,13 +4,13 @@ $border:1.5px solid var(--specialBlue);
 $max:6em;
 .bars {
     margin: 50px;
-    height: 16vw;
+    height: 19vw;
     position: fixed;
     padding: .6em;
-    right: -40px;
+    right: -35px;
     bottom: 0;
     z-index: 200;
-    width: 16vw;
+    width: 19vw;
     max-height: $max;
     max-width: $max;
     border-radius: 100%;

@@ -1,6 +1,6 @@
 import styles from './nav-desktop.module.scss';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import NavButton from '../nav-button/nav-button';
 const NavDesktop =()=>{
     const [ menuStatus,setMenuStatus ] = useState(styles.navClose);
@@ -10,7 +10,15 @@ const NavDesktop =()=>{
            return !menuOpen ? styles.navOpen :styles.navClose;
         },setMenuOpen(!menuOpen));
     }
+    useEffect(()=>{     
+        const animate = setInterval(()=>{
+            if(!menuOpen){
+                setMenuStatus(styles.navClose);
+            }
+        }, 500);
 
+        return () => clearInterval(animate);
+    },[menuOpen]);
 
     return(
     <div className={styles.navContainer}>

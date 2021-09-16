@@ -6,21 +6,29 @@ import NavIcon from '../nav-icon/nav-icon';
 const NavMobile =()=>{
     const [ menuStatus,setMenuStatus ] = useState(styles.navInitialClose);
     const [ menuOpen,setMenuOpen ] = useState(false);
+    const [ menu,setMenu ] = useState([
+        {ref:'#intro',iconSrc:'/icons/nav-mobile/intro.svg',refName:'Intro'},
+        {ref:'#propuesta',iconSrc:'/icons/nav-mobile/proposal.svg',refName:'Propuesta'},
+        {ref:'#vantages',iconSrc:'/icons/nav-mobile/vantages.svg',refName:'Ventajas'},
+        {ref:'#howItWork',iconSrc:'/icons/nav-mobile/how-it-works.svg',refName:'Cómo funciona'},
+        {ref:'#mission',iconSrc:'/icons/nav-mobile/target.svg',refName:'Misión'},
+        {ref:'#contacto',iconSrc:'/icons/nav-mobile/contact.svg',refName:'Contacto'},
+    ])
     const handleMenuStatus=()=>{
         setMenuStatus(()=>{
            return !menuOpen ? styles.navOpen :styles.close;
         },setMenuOpen(!menuOpen));
     }
-
-    useEffect(()=>{     
+  
+        useEffect(()=>{     
         const animate = setInterval(()=>{
             if(!menuOpen){
                 setMenuStatus(styles.navClose);
             }
-    }, 500);
+        }, 2);
 
-    return () => clearInterval(animate);
-},[menuOpen]);
+        return () => clearInterval(animate);
+    },[menuOpen]);
 
     return(
     <div className={styles.navContainer}>
@@ -30,12 +38,11 @@ const NavMobile =()=>{
         }
             <div className={menuStatus}>
                 <ul className={styles.nav}>
-                    <li><Link href="#intro" ><div className={styles.navSection}> <span >Intro</span> <NavIcon src={'/icons/nav-mobile/intro.svg'}/></div></Link></li>
-                    <li><Link href="#propuesta"><div className={styles.navSection}> <span >Propuesta</span> <NavIcon src={'/icons/nav-mobile/proposal.svg'}/></div></Link></li>
-                    <li><Link href="#vantages" ><div className={styles.navSection}> <span >Ventajas</span> <NavIcon src={'/icons/nav-mobile/vantages.svg'}/></div></Link></li>
-                    <li><Link href="#howItWork" ><div className={styles.navSection}> <span >Cómo funciona?</span> <NavIcon src={'/icons/nav-mobile/how-it-works.svg'}/></div></Link></li>
-                    <li><Link href="#mission" ><div className={styles.navSection}> <span >Misión</span> <NavIcon src={'/icons/nav-mobile/target.svg'}/></div></Link></li>
-                    <li><Link href="#contacto" ><div className={styles.navSection}> <span >Contacto </span> <NavIcon src={'/icons/nav-mobile/contact.svg'}/></div></Link></li>
+                    {
+                        menu.map(item =>(
+                            <li key={item.refName}><Link href={item.ref} ><div className={styles.navSection}><span className={styles.navDescription}>{item.refName}</span> <NavIcon src={item.iconSrc}/></div></Link></li>
+                        ))
+                    }
                 </ul>
             </div>
         </div>
