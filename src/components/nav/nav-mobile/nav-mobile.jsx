@@ -18,16 +18,12 @@ const NavMobile =()=>{
         setMenuStatus(()=>{
            return !menuOpen ? styles.navOpen :styles.close;
         },setMenuOpen(!menuOpen));
-    }
+    };
   
-        useEffect(()=>{     
-        const animate = setInterval(()=>{
+    useEffect(()=>{
             if(!menuOpen){
                 setMenuStatus(styles.navClose);
             }
-        }, 2);
-
-        return () => clearInterval(animate);
     },[menuOpen]);
 
     return(
