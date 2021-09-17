@@ -1,9 +1,9 @@
-import styles from './nav-mobile.module.scss';
+import styles from './nav-bar.module.scss';
 import Link from 'next/link';
 import { useState,useEffect } from 'react';
 import NavButton from '../nav-button/nav-button';
 import NavIcon from '../nav-icon/nav-icon';
-const NavMobile =()=>{
+const NavBar =()=>{
     const [ menuStatus,setMenuStatus ] = useState(styles.navInitialClose);
     const [ menuOpen,setMenuOpen ] = useState(false);
     const [ menu,setMenu ] = useState([
@@ -21,9 +21,13 @@ const NavMobile =()=>{
     };
   
     useEffect(()=>{
-            if(!menuOpen){
-                setMenuStatus(styles.navClose);
-            }
+            const animate = setInterval(()=>{
+                if(!menuOpen){
+                    setMenuStatus(styles.navClose);
+                }
+        }, 200);
+
+        return () => clearInterval(animate);
     },[menuOpen]);
 
     return(
@@ -46,4 +50,4 @@ const NavMobile =()=>{
     )
 }
 
-export default NavMobile;
+export default NavBar;

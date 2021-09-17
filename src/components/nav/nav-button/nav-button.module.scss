@@ -87,3 +87,9 @@ $max:6em;
         opacity: 1;
     }
 }
+
+@media (min-width: 1280px) {
+    .bars {
+        margin: 20px;
+    }
+}

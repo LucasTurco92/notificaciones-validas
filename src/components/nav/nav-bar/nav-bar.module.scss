@@ -1,8 +1,8 @@
-$animation-slide: .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-$animation-hide: .2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$animation: .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
 $border:1.5px solid var(--specialBlue);
+$font-desktop:2em;
 .font {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -20,7 +20,7 @@ $border:1.5px solid var(--specialBlue);
         margin: 0;
         padding: 0;
         z-index: 1;
-        bottom: 30%;
+        top: 5%;
         width: 100%;
         text-align: right;
         li {
@@ -34,6 +34,16 @@ $border:1.5px solid var(--specialBlue);
             filter: drop-shadow(0px 0px 10px var(--darkBlue));
             position: relative;
             top: 50%;
+            .navSection {
+                display: flex;
+                padding: 10px 20px;
+                text-transform: uppercase;
+                justify-content: flex-end;
+                align-items: center;
+                .navDescription {
+                    margin-right: 15px;
+                }
+            }
         }
     }
 }
@@ -67,30 +77,18 @@ $border:1.5px solid var(--specialBlue);
     }
 }
 
-.navDescription {
-    margin-right: 15px;
-}
-
-.navSection {
-    display: flex;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 .navClose {
     display: none;
 }
 
 .open {
-    -webkit-animation: slide-in-top $animation-slide both;
-    animation: slide-in-top $animation-slide both;
+    -webkit-animation: slide-in-top $animation both;
+    animation: slide-in-top $animation both;
 }
 
 .close {
-    -webkit-animation: slide-hide $animation-hide;
-    animation: slide-hide $animation-hide;
+    -webkit-animation: slide-hide $animation both;
+    animation: slide-hide $animation both;
 }
 
 @keyframes slide-in-top {
@@ -121,5 +119,32 @@ $border:1.5px solid var(--specialBlue);
     }
     100% {
         opacity: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navContainer {
+        .nav {
+            bottom: 60%;
+            li {
+                display: block;
+                &:hover {
+                    display: block;
+                }
+                .navSection {
+                    cursor: pointer;
+                    .navDescription {
+                        display: none;
+                    }
+                    &:hover {
+                        .navDescription {
+                            display: inline;
+                            margin: 0 auto;
+                            font-size: $font-desktop;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
