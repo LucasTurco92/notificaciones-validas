@@ -89,6 +89,7 @@ $font-desktop:2em;
 .close {
     -webkit-animation: slide-hide $animation both;
     animation: slide-hide $animation both;
+    pointer-events: none;
 }
 
 @keyframes slide-in-top {

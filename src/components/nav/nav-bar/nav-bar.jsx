@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState,useEffect } from 'react';
 import NavButton from '../nav-button/nav-button';
 import NavIcon from '../nav-icon/nav-icon';
+
 const NavBar =()=>{
     const [ menuStatus,setMenuStatus ] = useState(styles.navInitialClose);
     const [ menuOpen,setMenuOpen ] = useState(false);
@@ -13,34 +14,33 @@ const NavBar =()=>{
         {ref:'#howItWork',iconSrc:'/icons/nav-mobile/how-it-works.svg',refName:'Cómo funciona'},
         {ref:'#mission',iconSrc:'/icons/nav-mobile/target.svg',refName:'Misión'},
         {ref:'#contacto',iconSrc:'/icons/nav-mobile/contact.svg',refName:'Contacto'},
-    ])
+    ]);
+    
     const handleMenuStatus=()=>{
         setMenuStatus(()=>{
            return !menuOpen ? styles.navOpen :styles.close;
         },setMenuOpen(!menuOpen));
     };
-  
-    useEffect(()=>{
-            const animate = setInterval(()=>{
-                if(!menuOpen){
-                    setMenuStatus(styles.navClose);
-                }
-        }, 200);
-
-        return () => clearInterval(animate);
-    },[menuOpen]);
 
     return(
     <div className={styles.navContainer}>
         <div onClick={()=>handleMenuStatus()}>{
             menuOpen ? <NavButton enabledAnimation={false} src={'icons/cancel.svg'}/>
-            :   <NavButton enabledAnimation={!menuOpen} src={'icons/bars.svg'}/>
-        }
+            :   <NavButton enabledAnimation={!menuOpen} src={'icons/bars.svg'}/> }
             <div className={menuStatus}>
                 <ul className={styles.nav}>
                     {
                         menu.map(item =>(
-                            <li key={item.refName}><Link href={item.ref} ><div className={styles.navSection}><span className={styles.navDescription}>{item.refName}</span> <NavIcon src={item.iconSrc}/></div></Link></li>
+                            <li key={item.refName}>
+                                <Link href={item.ref}>
+                                    <a className={styles.navSection}>
+                                        <span className={styles.navDescription}>
+                                            {item.refName}
+                                        </span>
+                                        <NavIcon src={item.iconSrc}/>
+                                    </a>
+                                </Link>
+                            </li>
                         ))
                     }
                 </ul>
