@@ -2,10 +2,10 @@ import styles from './section-vantages.module.scss';
 import SeparatorBottom from "../separator-bottom/separator-bottom";
 import Cards from '../cards/cards';
 
-const SectionVantages = () => {
 
+const SectionVantages = () => {
     return (
-    <div id={'vantages'}  className={styles.container}>
+    <div id={'vantages'}>
       <SeparatorBottom show={true} color={'specialBlack'}/> 
       <h2 className={styles.title}>Ventajas</h2>
       <div className={styles.cardsContainer}>

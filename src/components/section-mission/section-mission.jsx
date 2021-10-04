@@ -1,13 +1,19 @@
 import { useRef } from 'react';
 import styles from "./section-mission.module.scss";
 import useOnScreen from '../../hooks/intersectionObserver';
+import useResponsiveWindow from '../../hooks/responsiveWindow';
+
 
 const SectionMission = () => {
+  const { isDesktop } = useResponsiveWindow();
+  const distance = isDesktop ? "-200px" : "";
+  const expandDevice = isDesktop ? styles.expandDesktop: styles.expandMobile;
   const ref = useRef();
-  const onScreen = useOnScreen(ref, '50px');
+  const onScreen = useOnScreen(ref, distance);
 
   return (
-    <div id={'mission'}  className={styles.content}> 
+    <div id={'mission'}  className={onScreen ? `${styles.content} ${expandDevice}` :styles.content}> 
+    
       <div className={styles.box} >
         <h2  className={styles.title}>Misión</h2>
         <p>
@@ -17,6 +23,7 @@ const SectionMission = () => {
         NUNCA FUE TAN FACIL, EFICAZ Y ECONÓMICO NOTIFICAR UNA DECISIÓN.
         </p>
       </div>
+      
       <img ref={ref} className={onScreen ? `${styles.bellAnimation} ${styles.bell}`  : styles.bell } src={'/images/bell-solid.svg'} />
     </div>
   )

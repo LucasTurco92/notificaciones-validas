@@ -1,5 +1,5 @@
 .container {
-    background: linear-gradient(0deg, var(--blue) 98%, rgba(29, 28, 26, 1) 100%);
+    background-color: var(--blue);
     .content {
         p {
             max-width: 500px;
@@ -12,26 +12,24 @@
             list-style: none;
         }
         .window {
-            width: 70%;
+            width: 95%;
         }
     }
 }
 
 @media (min-width: 1000px) {
-    .container {
-        .content {
-            p {
-                min-width: width 500px;
-            }
-            h3 {
-                font-size: 3em;
-            }
-            ul {
-                font-size: 2.5vh;
-            }
-            .window {
-                width: 10%;
-            }
+    .content {
+        p {
+            min-width: width 500px;
         }
+        h3 {
+            font-size: 3em;
+        }
+        ul {
+            font-size: 2.5vh;
+        }
+    }
+    .window {
+        width: 10%;
     }
 }
