@@ -4,7 +4,7 @@ import styles from './section-footer.module.scss';
 const SectionFooter = () => {
 
     return (
-    <div color={'containerFifth'} className={styles.container}>
+    <div className={styles.container}>
       <div  id={'contacto'}  className={styles.content}>
       <SeparatorBottom show={true} color={'specialBlack'}/>
         <ul>

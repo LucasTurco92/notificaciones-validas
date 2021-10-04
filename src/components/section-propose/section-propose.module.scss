@@ -1,6 +1,5 @@
 .content {
     display: flex;
-    padding: 10px 0;
     flex-direction: column;
     z-index: 50;
     font-size: 4vh;
@@ -10,7 +9,6 @@
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 25%, rgba(29, 28, 26, 1) 100%);
     color: var(--white);
     .box {
-        margin: 1%;
         padding: 0 10%;
         h3 {
             font-size: 2em;
