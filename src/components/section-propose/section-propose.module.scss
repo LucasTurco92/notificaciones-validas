@@ -32,10 +32,6 @@
     .desktopMobileApp {
         max-width: 80%;
     }
-    .expand {
-        -webkit-animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
 }
 
 @media (min-width: 800px) {
@@ -68,52 +64,53 @@
             top: 0;
         }
     }
-    .expand {
-        -webkit-animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
 }
 
-@keyframes expand-animation-mobile {
-    0% {
-        -webkit-height: 50vh;
-        height: 50vh;
-    }
-    100% {
-        -webkit-height: 55vh;
-        height: 55vh;
-    }
-}
-
-@-webkit-keyframes expand-animation-mobile {
-    0% {
-        -webkit-height: 50vh;
-        height: 50vh;
-    }
-    100% {
-        -webkit-height: 55vh;
-        height: 55vh;
-    }
-}
-
-@-webkit-keyframes expand-animation-desktop {
-    0% {
-        -webkit-height: 40vh;
-        height: 40vh;
-    }
-    100% {
-        -webkit-height: 60vh;
-        height: 60vh;
-    }
-}
-
-@keyframes expand-animation-desktop {
-    0% {
-        -webkit-height: 40vh;
-        height: 40vh;
-    }
-    100% {
-        -webkit-height: 60vh;
-        height: 60vh;
-    }
-}
+// .expandMobile {
+//     -webkit-animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+//     animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// }
+// .expandDesktop {
+//     -webkit-animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+//     animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// }
+// @keyframes expand-animation-mobile {
+//     0% {
+//         -webkit-height: 50vh;
+//         height: 50vh;
+//     }
+//     100% {
+//         -webkit-height: 55vh;
+//         height: 55vh;
+//     }
+// }
+// @-webkit-keyframes expand-animation-mobile {
+//     0% {
+//         -webkit-height: 50vh;
+//         height: 50vh;
+//     }
+//     100% {
+//         -webkit-height: 55vh;
+//         height: 55vh;
+//     }
+// }
+// @-webkit-keyframes expand-animation-desktop {
+//     0% {
+//         -webkit-height: 40vh;
+//         height: 40vh;
+//     }
+//     100% {
+//         -webkit-height: 60vh;
+//         height: 60vh;
+//     }
+// }
+// @keyframes expand-animation-desktop {
+//     0% {
+//         -webkit-height: 40vh;
+//         height: 40vh;
+//     }
+//     100% {
+//         -webkit-height: 60vh;
+//         height: 60vh;
+//     }
+// }
