@@ -1,14 +1,14 @@
 import { useRef } from 'react';
 import styles from "./section-mission.module.scss";
-import useOnScreen from '../../hooks/intersectionObserver';
-import useResponsiveWindow from '../../hooks/responsiveWindow';
+// import useOnScreen from '../../hooks/intersectionObserver';
+// import useResponsiveWindow from '../../hooks/responsiveWindow';
 
 
 const SectionMission = () => {
-  const { isDesktop } = useResponsiveWindow();
-  const distance = isDesktop ? "-200px" : "";
-  const ref = useRef();
-  const onScreen = useOnScreen(ref, distance);
+  // const { isDesktop } = useResponsiveWindow();
+  // const distance = isDesktop ? "-200px" : "";
+  // const ref = useRef();
+  // const onScreen = useOnScreen(ref, distance);
 
   return (
     <div id={'mission'}  className={styles.content}> 
@@ -23,7 +23,7 @@ const SectionMission = () => {
         </p>
       </div>
       
-      <img ref={ref} className={onScreen ? `${styles.bellAnimation} ${styles.bell}`  : styles.bell } src={'/images/bell-solid.svg'} />
+      <img  className={styles.bell} src={'/images/bell-solid.svg'} />
     </div>
   )
 }
