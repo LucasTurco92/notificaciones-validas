@@ -1,4 +1,3 @@
-import SectionContainer from "../section-container/section-container";
 import styles from './section-first.module.scss';
 import useResponsiveWindow from '../../hooks/responsiveWindow';
 import SeparatorTop from "../separator-top/separator-top";
@@ -6,7 +5,7 @@ import SeparatorTop from "../separator-top/separator-top";
 const SectionFirst = () => {
     const { isDesktop } = useResponsiveWindow();
     return (
-        <SectionContainer id={'intro'} className={styles.containerFirst}  color={'containerFirst'} show={false}> 
+        <div id={'intro'}> 
             <div className={styles.cover}>
                 { isDesktop ? <img className={styles.coverUpDesktop} src={'/images/galaxy-2.jpg'} />
                 : <img className={styles.coverUpMobile} src={'/images/galaxy-mobile.jpg'} />}
@@ -19,7 +18,7 @@ const SectionFirst = () => {
                 </div>   
             </div>
             <SeparatorTop showMobile={false} color={'specialBlack'}/>
-        </SectionContainer>
+        </div>
     )
 }
 

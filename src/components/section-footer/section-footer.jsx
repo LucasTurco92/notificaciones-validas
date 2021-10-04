@@ -1,12 +1,10 @@
-import SectionContainer from "../section-container/section-container";
 import SeparatorBottom from "../separator-bottom/separator-bottom";
-
 import styles from './section-footer.module.scss';
 
 const SectionFooter = () => {
 
     return (
-    <SectionContainer color={'containerFifth'} show={true}>
+    <div color={'containerFifth'} className={styles.container}>
       <div  id={'contacto'}  className={styles.content}>
       <SeparatorBottom show={true} color={'specialBlack'}/>
         <ul>
@@ -22,7 +20,7 @@ const SectionFooter = () => {
         </ul>
         <img className={styles.window} src={'/images/window-1.svg'} />
       </div>
-    </SectionContainer>
+    </div>
     )
 }
 

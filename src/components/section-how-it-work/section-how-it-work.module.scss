@@ -1,0 +1,80 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8vh 0 0 1vw;
+    p {
+        position: relative;
+        z-index: 20;
+        font-size: 14px;
+    }
+    .mainTitle {
+        flex: 0 1 100%;
+        font-size: 4vh;
+        margin: 6vh;
+        font-family: CormorantInfant;
+        text-transform: uppercase;
+    }
+    .box {
+        margin: 1vh 0;
+        width: 80%;
+        .title {
+            font-weight: bold;
+            border-bottom: 1px dotted black;
+        }
+        .text {
+            margin: 0;
+        }
+    }
+    .imageContract {
+        max-width: 50vw;
+        margin: 3vh auto;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 600px) {
+    .content {
+        flex-direction: row;
+        align-items: normal;
+        padding: 8vh 0 0 5vw;
+        p {
+            font-size: 16px;
+        }
+        h3 {
+            margin: 0;
+        }
+        .box {
+            max-width: 50%;
+            .text {
+                margin: 0 10%;
+                font-size: 14px;
+            }
+        }
+        .image {
+            flex-grow: 0;
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+    }
+    .imageContract {
+        max-height: 40vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        .box {
+            max-width: 33%;
+            min-width: 330px;
+        }
+        .imageContract {
+            position: relative;
+            max-height: 30vw;
+            right: 5%;
+            z-index: 1;
+            top: 40%;
+        }
+    }
+}

@@ -1,11 +1,9 @@
-import SectionContainer from "../section-container/section-container";
-import styles from "./section-third.module.scss";
-import common from '../section-container/section-container.module.scss';
+import styles from "./section-how-it-work.module.scss";
 import { useState } from 'react';
 import SeparatorTop from "../separator-top/separator-top";
 import WorkIcon from "../work-icon/work-icon";
 
-const SectionThird = () => {
+const SectionHowItWork = () => {
   const [boxes, setBoxes]= useState([
     {
       key:'1',
@@ -30,9 +28,9 @@ const SectionThird = () => {
   ]);
 
     return (
-      <SectionContainer color={'containerThird'} show={true}>
+      <div>
         <SeparatorTop showMobile={false} color={'specialBlack'}/>
-        <div id={'howItWork'} className={`${common.content} ${styles.content}`}>      
+        <div id={'howItWork'} className={styles.content}>      
           <h2 className={styles.mainTitle}>¿Cómo funciona?</h2>
           {
           boxes.map(box=>(
@@ -46,8 +44,8 @@ const SectionThird = () => {
           }
           <img className={styles.imageContract} src={'/images/universe-4.svg'} />
         </div>
-    </SectionContainer>
+    </div>
     )
 }
 
-export default SectionThird;
+export default SectionHowItWork;

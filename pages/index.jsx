@@ -1,8 +1,8 @@
 import Header from "../src/components/header/header";
 
 import SectionFirst from "../src/components/section-first/section-first.jsx";
-import SectionSecond from "../src/components/section-second/section-second.jsx";
-import SectionThird from "../src/components/section-third/section-third.jsx";
+import SectionPropose from "../src/components/section-propose/section-propose.jsx";
+import SectionHowItWork from "../src/components/section-how-it-work/section-how-it-work.jsx";
 import SectionVantages from "../src/components/section-vantages/section-vantages.jsx";
 import SectionFooter from "../src/components/section-footer/section-footer.jsx";
 import SectionMission from "../src/components/section-mission/section-mission.jsx";
@@ -13,9 +13,9 @@ export default function Home() {
     <div className={styles.container}>
       <Header/>
       <SectionFirst/>
-      <SectionSecond/>
+      <SectionPropose/>
       <SectionVantages/>
-      <SectionThird/>
+      <SectionHowItWork/>
       <SectionMission/>
       <SectionFooter/>
     </div>
