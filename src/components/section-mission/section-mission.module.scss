@@ -26,7 +26,16 @@
         }
     }
     .bell {
-        display: none;
+        display: block;
+        border: none;
+        width: 10%;
+        left: 10px;
+        top: 0;
+        max-width: 150px;
+    }
+    .bellAnimation {
+        -webkit-animation: bell-animation 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: bell-animation 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 }
 
@@ -51,12 +60,41 @@
                 margin-bottom: 0;
             }
         }
-        .bell {
-            display: block;
-            border: none;
-            width: 10%;
-            left: 10px;
-            top: 0;
-        }
+    }
+}
+
+@-webkit-keyframes bell-animation {
+    0%,
+    100% {
+        -webkit-transform: rotatez(0deg);
+        transform: rotatez(0deg);
+    }
+    30%,
+    60% {
+        -webkit-transform: rotatez(-40deg);
+        transform: rotatez(-40deg);
+    }
+    50%,
+    70% {
+        -webkit-transform: rotatez(40deg);
+        transform: rotatez(40deg);
+    }
+}
+
+@keyframes bell-animation {
+    0%,
+    100% {
+        -webkit-transform: rotatez(0deg);
+        transform: rotatez(0deg);
+    }
+    30%,
+    60% {
+        -webkit-transform: rotatez(-40deg);
+        transform: rotatez(-40deg);
+    }
+    50%,
+    70% {
+        -webkit-transform: rotatez(40deg);
+        transform: rotatez(40deg);
     }
 }
