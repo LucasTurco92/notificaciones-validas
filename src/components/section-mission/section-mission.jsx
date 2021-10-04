@@ -1,12 +1,15 @@
 import { useRef } from 'react';
 import styles from "./section-mission.module.scss";
 import useOnScreen from '../../hooks/intersectionObserver';
+import useResponsiveWindow from '../../hooks/responsiveWindow';
 
 
 const SectionMission = () => {
+  const { isDesktop } = useResponsiveWindow();
+  const distance = isDesktop ? "-200px" : "";
   const ref = useRef();
-  const onScreen = useOnScreen(ref, "-200px");
-console.log('onScreen: ',onScreen);
+  const onScreen = useOnScreen(ref, distance);
+
   return (
     <div id={'mission'}  className={styles.content}> 
     
