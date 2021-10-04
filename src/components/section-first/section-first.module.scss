@@ -36,7 +36,6 @@
                 background-size: 400% 400%;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                animation: animateTitle 12s linear infinite both alternate;
                 display: block;
                 align-self: center;
             }
@@ -90,6 +89,11 @@
             }
         }
     }
+}
+
+.animation {
+    -webkit-animation: animateTitle 12s linear infinite both alternate;
+    animation: animateTitle 12s linear infinite both alternate;
 }
 
 @media (min-width: 1500px) {

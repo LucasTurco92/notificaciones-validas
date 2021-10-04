@@ -1,9 +1,15 @@
+import { useRef } from 'react';
 import styles from './section-first.module.scss';
 import useResponsiveWindow from '../../hooks/responsiveWindow';
 import SeparatorTop from "../separator-top/separator-top";
+import useOnScreen from '../../hooks/intersectionObserver';
 
 const SectionFirst = () => {
     const { isDesktop } = useResponsiveWindow();
+    const distance = isDesktop ? "-200px" : "";
+    const ref = useRef();
+    const onScreen = useOnScreen(ref, distance);
+    
     return (
         <div id={'intro'} className={styles.container}> 
             <div className={styles.cover} >
@@ -11,7 +17,7 @@ const SectionFirst = () => {
                 : <img className={styles.coverUpMobile} src={'/images/galaxy-mobile.jpg'} />}
            
                 <div className={styles.coverImageContainer}>
-                    <h2 className={styles.title}>Notificaciones Válidas</h2>        
+                    <h2 ref={ref} className={onScreen ? `${styles.title} ${styles.animation}` : styles.title}>Notificaciones Válidas</h2>        
                     <div className={styles.coverImage}>
                         <span className={styles.legend}>"Comunicaciones simples, eficaces y legales."</span>
                     </div>
