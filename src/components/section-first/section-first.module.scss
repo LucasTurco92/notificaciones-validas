@@ -8,7 +8,8 @@
 }
 
 .container {
-    min-height: 0;
+    width: 100%;
+    position: relative;
     .cover {
         min-height: 100vh;
         display: flex;
