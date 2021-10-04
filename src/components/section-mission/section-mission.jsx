@@ -1,8 +1,7 @@
-import { useRef,useEffect } from 'react';
+import { useRef } from 'react';
 import styles from "./section-mission.module.scss";
 import useOnScreen from '../../hooks/intersectionObserver';
 import useResponsiveWindow from '../../hooks/responsiveWindow';
-import Router from 'next/router'
 
 
 const SectionMission = () => {
@@ -12,11 +11,6 @@ const SectionMission = () => {
   const ref = useRef();
   const onScreen = useOnScreen(ref, distance);
 
-  useEffect(()=>{
-    if(onScreen) {Router.push('/#mission')};
-
-  },[onScreen]);
-
   return (
     <div id={'mission'}  className={onScreen ? `${styles.content} ${expandDevice}` :styles.content}> 
     
@@ -25,12 +19,12 @@ const SectionMission = () => {
         <p>
         Crear una plataforma que otorgue VALOR LEGAL a un medio electrónico, de forma rápida, segura y eficaz permitiendo ahorrar tiempo y dinero, evitando problemas legales por el uso de correos electrónicos.
         </p>
-        <p ref={ref}>
+        <p>
         NUNCA FUE TAN FACIL, EFICAZ Y ECONÓMICO NOTIFICAR UNA DECISIÓN.
         </p>
       </div>
       
-      <img className={onScreen ? `${styles.bellAnimation} ${styles.bell}`  : styles.bell } src={'/images/bell-solid.svg'} />
+      <img ref={ref} className={onScreen ? `${styles.bellAnimation} ${styles.bell}`  : styles.bell } src={'/images/bell-solid.svg'} />
     </div>
   )
 }
