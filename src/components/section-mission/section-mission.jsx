@@ -13,14 +13,14 @@ const SectionMission = () => {
     
       <div className={styles.box} >
         <h2  className={styles.title}>Misión</h2>
-        <MagicComponent>
+        {/* <MagicComponent> */}
         <p>
         Crear una plataforma que otorgue VALOR LEGAL a un medio electrónico, de forma rápida, segura y eficaz permitiendo ahorrar tiempo y dinero, evitando problemas legales por el uso de correos electrónicos.
         </p>
         <p>
         NUNCA FUE TAN FACIL, EFICAZ Y ECONÓMICO NOTIFICAR UNA DECISIÓN.
         </p>
-        </MagicComponent>
+        {/* </MagicComponent> */}
       </div>
       
       <img ref={ref} className={onScreen ? `${styles.bellAnimation} ${styles.bell}`  : styles.bell } src={'/images/bell-solid.svg'} />
