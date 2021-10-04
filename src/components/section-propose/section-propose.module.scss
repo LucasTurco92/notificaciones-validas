@@ -1,4 +1,5 @@
-.content {
+$animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+.container {
     display: flex;
     flex-direction: column;
     z-index: 50;
@@ -35,7 +36,7 @@
 }
 
 @media (min-width: 800px) {
-    .content {
+    .container {
         flex-wrap: nowrap;
         align-items: center;
         background: var(--black);
@@ -63,5 +64,59 @@
             left: 10px;
             top: 0;
         }
+    }
+}
+
+.expandMobile {
+    -webkit-animation: expand-animation-mobile $animation;
+    animation: expand-animation-mobile $animation;
+}
+
+.expandDesktop {
+    -webkit-animation: expand-animation-desktop $animation;
+    animation: expand-animation-desktop $animation;
+}
+
+@keyframes expand-animation-mobile {
+    0% {
+        -webkit-height: 50vh;
+        height: 50vh;
+    }
+    100% {
+        -webkit-height: 55vh;
+        height: 55vh;
+    }
+}
+
+@-webkit-keyframes expand-animation-mobile {
+    0% {
+        -webkit-height: 50vh;
+        height: 50vh;
+    }
+    100% {
+        -webkit-height: 55vh;
+        height: 55vh;
+    }
+}
+
+@-webkit-keyframes expand-animation-desktop {
+    0% {
+        -webkit-height: 40vh;
+        height: 40vh;
+    }
+    100% {
+        -webkit-height: 60vh;
+        height: 60vh;
+    }
+}
+
+@keyframes expand-animation-desktop {
+    0% {
+        -webkit-height: 40vh;
+        height: 40vh;
+    }
+    100% {
+        -webkit-height: 60vh;
+        height: 60vh;
     }
 }
