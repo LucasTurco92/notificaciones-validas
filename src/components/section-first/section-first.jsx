@@ -5,8 +5,8 @@ import SeparatorTop from "../separator-top/separator-top";
 const SectionFirst = () => {
     const { isDesktop } = useResponsiveWindow();
     return (
-        <div id={'intro'}> 
-            <div className={styles.cover}>
+        <div id={'intro'} className={styles.container}> 
+            <div className={styles.cover} >
                 { isDesktop ? <img className={styles.coverUpDesktop} src={'/images/galaxy-2.jpg'} />
                 : <img className={styles.coverUpMobile} src={'/images/galaxy-mobile.jpg'} />}
            
