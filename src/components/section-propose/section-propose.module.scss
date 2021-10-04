@@ -33,6 +33,10 @@ $animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     .desktopMobileApp {
         max-width: 80%;
     }
+    .expand {
+        -webkit-animation: expand-animation-mobile $animation;
+        animation: expand-animation-mobile $animation;
+    }
 }
 
 @media (min-width: 800px) {
@@ -65,16 +69,10 @@ $animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             top: 0;
         }
     }
-}
-
-.expandMobile {
-    -webkit-animation: expand-animation-mobile $animation;
-    animation: expand-animation-mobile $animation;
-}
-
-.expandDesktop {
-    -webkit-animation: expand-animation-desktop $animation;
-    animation: expand-animation-desktop $animation;
+    .expand {
+        -webkit-animation: expand-animation-desktop $animation;
+        animation: expand-animation-desktop $animation;
+    }
 }
 
 @keyframes expand-animation-mobile {

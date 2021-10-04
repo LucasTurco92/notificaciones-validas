@@ -1,19 +1,15 @@
 import { useRef } from 'react';
 import styles from "./section-mission.module.scss";
 import useOnScreen from '../../hooks/intersectionObserver';
-import useResponsiveWindow from '../../hooks/responsiveWindow';
 import MagicComponent from '../magic-component/magic-component';
 
 
 const SectionMission = () => {
-  const { isDesktop } = useResponsiveWindow();
-  const distance = isDesktop ? "-200px" : "";
-  const expandDevice = isDesktop ? styles.expandDesktop: styles.expandMobile;
   const ref = useRef();
-  const onScreen = useOnScreen(ref, distance);
+  const onScreen = useOnScreen(ref, '50px');
 
   return (
-    <div id={'mission'}  className={onScreen ? `${styles.content} ${expandDevice}` :styles.content}> 
+    <div id={'mission'}  className={onScreen ? `${styles.content} ${styles.expand}` :styles.content}> 
     
       <div className={styles.box} >
         <h2  className={styles.title}>Misión</h2>

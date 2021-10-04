@@ -1,18 +1,14 @@
 import styles from "./section-propose.module.scss";
 import { useRef } from 'react';
 import useOnScreen from '../../hooks/intersectionObserver';
-import useResponsiveWindow from '../../hooks/responsiveWindow';
 import MagicComponent from '../magic-component/magic-component';
 
 const SectionPropose = () => {
-  const { isDesktop } = useResponsiveWindow();
-  const distance = isDesktop ? "-200px" : "";
-  const expandDevice = isDesktop ? styles.expandDesktop: styles.expandMobile;
   const ref = useRef();
-  const onScreen = useOnScreen(ref, distance);
+  const onScreen = useOnScreen(ref, '');
   return (
     <div> 
-      <div id={'propuesta'}  className={onScreen ? `${styles.container} ${expandDevice}` : styles.container}>
+      <div id={'propuesta'}  className={onScreen ? `${styles.container} ${styles.expand}` : styles.container}>
         <div className={styles.box}>
           <h2 className={styles.title} ref={ref}>Nosotros proponemos</h2>
           <MagicComponent>

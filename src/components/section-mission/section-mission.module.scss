@@ -1,3 +1,4 @@
+$animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 .content {
     width: 100%;
     position: relative;
@@ -35,9 +36,14 @@
         max-width: 150px;
     }
     .bellAnimation {
-        -webkit-animation: bell-animation 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: bell-animation 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        -webkit-animation: bell-animation $animation;
+        animation: bell-animation $animation;
     }
+}
+
+.expand {
+    -webkit-animation: expand-animation-mobile $animation;
+    animation: expand-animation-mobile $animation;
 }
 
 @media (min-width: 1000px) {
@@ -61,6 +67,10 @@
                 margin-bottom: 0;
             }
         }
+    }
+    .expand {
+        -webkit-animation: expand-animation-desktop $animation;
+        animation: expand-animation-desktop $animation;
     }
 }
 
@@ -98,16 +108,6 @@
         -webkit-transform: rotatez(40deg);
         transform: rotatez(40deg);
     }
-}
-
-.expandMobile {
-    -webkit-animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.expandDesktop {
-    -webkit-animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes expand-animation-mobile {
