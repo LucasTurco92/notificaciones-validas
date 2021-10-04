@@ -7,12 +7,12 @@ import useResponsiveWindow from '../../hooks/responsiveWindow';
 const SectionMission = () => {
   const { isDesktop } = useResponsiveWindow();
   const distance = isDesktop ? "-200px" : "";
-  const expandDevice = isDesktop ? styles.expandDesktop: styles.expandMobile;
+
   const ref = useRef();
   const onScreen = useOnScreen(ref, distance);
 
   return (
-    <div id={'mission'}  className={onScreen ? `${styles.content} ${expandDevice}` :styles.content}> 
+    <div id={'mission'}  className={styles.content}> 
     
       <div className={styles.box} >
         <h2  className={styles.title}>Misión</h2>

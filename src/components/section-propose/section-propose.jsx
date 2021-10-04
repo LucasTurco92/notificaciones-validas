@@ -6,12 +6,11 @@ import useResponsiveWindow from '../../hooks/responsiveWindow';
 const SectionPropose = () => {
   const { isDesktop } = useResponsiveWindow();
   const distance = isDesktop ? "-200px" : "";
-  const expandDevice = isDesktop ? styles.expandDesktop: styles.expandMobile;
   const ref = useRef();
   const onScreen = useOnScreen(ref, distance);
   return (
     <div> 
-      <div id={'propuesta'}  className={onScreen ? `${styles.container} ${expandDevice}` : styles.container}>
+      <div id={'propuesta'}  className={styles.container}>
         <div className={styles.box}>
           <h2 className={styles.title} ref={ref}>Nosotros proponemos</h2>
           <p>
