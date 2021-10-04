@@ -2,8 +2,8 @@ import styles from './section-vantages.module.scss';
 import SeparatorBottom from "../separator-bottom/separator-bottom";
 import Cards from '../cards/cards';
 
-
 const SectionVantages = () => {
+
     return (
     <div id={'vantages'}>
       <SeparatorBottom show={true} color={'specialBlack'}/> 
