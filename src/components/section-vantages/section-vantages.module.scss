@@ -1,6 +1,10 @@
-.title {
-    font-size: 4vh;
-    text-align: center;
-    font-family: CormorantInfant;
-    text-transform: uppercase;
+.container {
+    background: var(--white);
+    background: linear-gradient(0deg, var(--white) 98%, var(--black) 100%);
+    .title {
+        font-size: 4vh;
+        text-align: center;
+        font-family: CormorantInfant;
+        text-transform: uppercase;
+    }
 }
