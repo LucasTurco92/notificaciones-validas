@@ -1,20 +1,28 @@
 .container {
     background-color: var(--blue);
-    .content {
-        p {
-            max-width: 500px;
-        }
-        h3 {
-            font-size: 2em;
-        }
-        ul {
-            text-shadow: 0 0 3px #fff, 0 0 7px #fff;
-            list-style: none;
-        }
-        .window {
-            width: 95%;
-        }
+}
+
+.content {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    p {
+        max-width: width 500px;
     }
+    h3 {
+        font-size: 2em;
+    }
+    ul {
+        text-shadow: 0 0 3px #fff, 0 0 7px #fff;
+        list-style: none;
+    }
+}
+
+.window {
+    width: 95%;
+}
+
+.contact {
+    display: none;
 }
 
 @media (min-width: 1000px) {

@@ -7,85 +7,77 @@
     object-position: right;
 }
 
-.container {
-    width: 100%;
-    position: relative;
-    .cover {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        .coverUpDesktop {
-            @extend .coverUp;
+.cover {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    .coverUpDesktop {
+        @extend .coverUp;
+    }
+    .coverUpMobile {
+        @extend .coverUp;
+    }
+    .coverImageContainer {
+        z-index: 1;
+        font-size: 7vw;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: normal;
+        max-width: 100%;
+        padding: 3%;
+        .title {
+            margin: 0;
+            background: #fff;
+            overflow: hidden;
+            background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%, rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%, rgba(74, 165, 168, 1) 30%, rgba(89, 90, 165, 1) 40%, rgba(84, 16, 67, 1) 50%, rgba(28, 58, 63, 1) 60%, rgba(82, 175, 183, 1) 70%, rgba(78, 170, 76, 1) 80%, rgba(150, 48, 30, 1) 90%, rgba(199, 201, 88, 1) 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: animateTitle 12s linear infinite both alternate;
+            display: block;
+            align-self: center;
         }
-        .coverUpMobile {
-            @extend .coverUp;
-        }
-        .coverImageContainer {
-            z-index: 1;
-            font-size: 7vw;
-            text-transform: uppercase;
-            font-weight: bold;
-            line-height: normal;
-            max-width: 100%;
-            padding: 3%;
-            .title {
-                margin: 0;
-                background: #fff;
-                overflow: hidden;
-                background: linear-gradient(90deg, rgba(150, 48, 30, 1) 0%, rgba(199, 201, 88, 1) 10%, rgba(28, 147, 46, 1) 20%, rgba(74, 165, 168, 1) 30%, rgba(89, 90, 165, 1) 40%, rgba(84, 16, 67, 1) 50%, rgba(28, 58, 63, 1) 60%, rgba(82, 175, 183, 1) 70%, rgba(78, 170, 76, 1) 80%, rgba(150, 48, 30, 1) 90%, rgba(199, 201, 88, 1) 100%);
-                background-size: 400% 400%;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                animation: animateTitle 12s linear infinite both alternate;
-                display: block;
-                align-self: center;
-            }
-            .coverImage {
-                .legend {
-                    font-size: 3.5vw;
-                    color: var(--specialBlue);
-                    text-shadow: 0px 0px 20px var(--purple);
-                }
+        .coverImage {
+            .legend {
+                font-size: 3.5vw;
+                color: var(--specialBlue);
+                text-shadow: 0px 0px 20px var(--purple);
             }
         }
     }
 }
 
 @media (min-width: 800px) {
-    .container {
-        .cover {
-            .coverUp {
-                object-position: top;
-            }
-            .coverImageContainer {
-                font-size: 6vw;
-                margin-top: 0;
-                .coverImage {
-                    color: var(--specialWhite);
-                    background-repeat: no-repeat;
-                    max-width: 90%;
-                    font-size: 3vw;
-                    padding: 0;
-                }
+    .cover {
+        .coverUp {
+            object-position: top;
+        }
+        .coverImageContainer {
+            font-size: 6vw;
+            margin-top: 0;
+            .coverImage {
+                color: var(--specialWhite);
+                background-repeat: no-repeat;
+                max-width: 90%;
+                font-size: 3vw;
+                padding: 0;
             }
         }
     }
 }
 
 @media (min-width: 1400px) {
-    .container {
-        .cover {
-            .coverImageContainer {
-                max-width: 80%;
-                background-size: 70%;
-                .title {
-                    font-size: 6.5vw;
-                }
-                .coverImage {
-                    background-size: 65%;
-                    .legend {
-                        font-size: 2vw;
-                    }
+    .cover {
+        .coverImageContainer {
+            max-width: 80%;
+            background-size: 70%;
+            .title {
+                font-size: 6.5vw;
+            }
+            .coverImage {
+                background-size: 65%;
+                .legend {
+                    font-size: 2vw;
                 }
             }
         }
@@ -93,13 +85,11 @@
 }
 
 @media (min-width: 1500px) {
-    .container {
-        .cover {
-            .coverImageContainer {
-                max-width: 75%;
-                .title {
-                    font-size: 5.5vw;
-                }
+    .cover {
+        .coverImageContainer {
+            max-width: 75%;
+            .title {
+                font-size: 5.5vw;
             }
         }
     }
