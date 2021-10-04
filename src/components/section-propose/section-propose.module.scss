@@ -1,4 +1,3 @@
-$animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 .container {
     display: flex;
     flex-direction: column;
@@ -34,8 +33,8 @@ $animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         max-width: 80%;
     }
     .expand {
-        -webkit-animation: expand-animation-mobile $animation;
-        animation: expand-animation-mobile $animation;
+        -webkit-animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: expand-animation-mobile 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 }
 
@@ -70,8 +69,8 @@ $animation: 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
     }
     .expand {
-        -webkit-animation: expand-animation-desktop $animation;
-        animation: expand-animation-desktop $animation;
+        -webkit-animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: expand-animation-desktop 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 }
 
