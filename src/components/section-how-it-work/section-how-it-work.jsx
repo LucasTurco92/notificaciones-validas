@@ -2,6 +2,7 @@ import styles from "./section-how-it-work.module.scss";
 import { useState } from 'react';
 import SeparatorTop from "../separator-top/separator-top";
 import WorkIcon from "../work-icon/work-icon";
+import MagicComponent from "./../magic-component/magic-component";
 
 const SectionHowItWork = () => {
   const [boxes, setBoxes]= useState([
@@ -37,7 +38,7 @@ const SectionHowItWork = () => {
             <div className={styles.box} key={box.key}>
               <div className={styles.text}>
                 <span className={styles.title}>{box.icon}</span>
-                <p>{box.text}</p>
+                <MagicComponent><p>{box.text}</p></MagicComponent>
               </div>
             </div>
           ))
