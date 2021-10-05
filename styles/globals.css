@@ -42,6 +42,7 @@ p {
     --solidBlack: #000;
     --specialViolet: rgba(32, 28, 44, .6);
     --darkBlue: #4444dd;
+    --gradient-shadow: linear-gradient( 45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
 }
 
 h2 {

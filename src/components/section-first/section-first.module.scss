@@ -1,3 +1,4 @@
+$animation-stelar: animateTitle 9s linear infinite both alternate;
 .coverUp {
     width: 100%;
     position: absolute;
@@ -92,8 +93,8 @@
 }
 
 .animation {
-    -webkit-animation: animateTitle 12s linear infinite both alternate;
-    animation: animateTitle 12s linear infinite both alternate;
+    -webkit-animation: $animation-stelar;
+    animation: $animation-stelar;
 }
 
 @media (min-width: 1500px) {

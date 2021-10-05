@@ -1,3 +1,5 @@
+$text-shadow-blue: 0 0 3px var(--blue),
+0 0 7px var(--blue);
 .content {
     width: 100%;
     position: relative;
@@ -25,18 +27,16 @@
             color: var(--specialWhite);
             font-size: 16px;
         }
-    }
-    .bell {
-        display: block;
-        border: none;
-        width: 10%;
-        left: 10px;
-        top: 0;
-        max-width: 150px;
-    }
-    .bellAnimation {
-        -webkit-animation: bell-animation 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: bell-animation 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        .text {
+            text-transform: uppercase;
+            font-family: CormorantInfant;
+            text-shadow: $text-shadow-blue
+        }
+        .phrase {
+            text-transform: uppercase;
+            font-family: CormorantInfant;
+            text-shadow: $text-shadow-blue
+        }
     }
 }
 
@@ -60,42 +60,9 @@
             .title {
                 margin-bottom: 0;
             }
+            .phrase {
+                font-size: 1.5vw;
+            }
         }
-    }
-}
-
-@-webkit-keyframes bell-animation {
-    0%,
-    100% {
-        -webkit-transform: rotatez(0deg);
-        transform: rotatez(0deg);
-    }
-    30%,
-    60% {
-        -webkit-transform: rotatez(-40deg);
-        transform: rotatez(-40deg);
-    }
-    50%,
-    70% {
-        -webkit-transform: rotatez(40deg);
-        transform: rotatez(40deg);
-    }
-}
-
-@keyframes bell-animation {
-    0%,
-    100% {
-        -webkit-transform: rotatez(0deg);
-        transform: rotatez(0deg);
-    }
-    30%,
-    60% {
-        -webkit-transform: rotatez(-40deg);
-        transform: rotatez(-40deg);
-    }
-    50%,
-    70% {
-        -webkit-transform: rotatez(40deg);
-        transform: rotatez(40deg);
     }
 }
