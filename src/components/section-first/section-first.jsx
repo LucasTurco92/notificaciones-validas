@@ -3,6 +3,7 @@ import styles from './section-first.module.scss';
 import useResponsiveWindow from '../../hooks/responsiveWindow';
 import SeparatorTop from "../separator-top/separator-top";
 import useOnScreen from '../../hooks/intersectionObserver';
+import MagicComponent from "./../magic-component/magic-component";
 
 const SectionFirst = () => {
     const { isDesktop } = useResponsiveWindow();
@@ -19,7 +20,9 @@ const SectionFirst = () => {
                 <div className={styles.coverImageContainer}>
                     <h2 ref={ref} className={onScreen ? `${styles.title} ${styles.animation}` : styles.title}>Notificaciones Válidas</h2>        
                     <div className={styles.coverImage}>
-                        <span className={styles.legend}>"Comunicaciones simples, eficaces y legales."</span>
+                        <MagicComponent>
+                            <span className={styles.legend}>"Comunicaciones simples, eficaces y legales."</span>
+                        </MagicComponent>
                     </div>
                 </div>   
             </div>
