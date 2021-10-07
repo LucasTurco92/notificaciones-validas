@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef,useState,useEffect } from 'react';
 import styles from './section-first.module.scss';
 import useResponsiveWindow from '../../hooks/responsiveWindow';
 import SeparatorTop from "../separator-top/separator-top";
@@ -10,13 +10,14 @@ const SectionFirst = () => {
     const distance = isDesktop ? "-200px" : "";
     const ref = useRef();
     const onScreen = useOnScreen(ref, distance);
-    
+    const [ imgBackground,setImgBackground ]= useState(isDesktop ? <img className={styles.coverUpDesktop} src={'/images/galaxy-2.jpg'} />:
+    <img className={styles.coverUpMobile} src={'/images/galaxy-mobile.jpg'} />);
+  
+
     return (
         <div id={'intro'} className={styles.container}> 
             <div className={styles.cover} >
-                { isDesktop ? <img className={styles.coverUpDesktop} src={'/images/galaxy-2.jpg'} />
-                : <img className={styles.coverUpMobile} src={'/images/galaxy-mobile.jpg'} />}
-           
+                {imgBackground}
                 <div className={styles.coverImageContainer}>
                     <h2 ref={ref} className={onScreen ? `${styles.title} ${styles.animation}` : styles.title}>Notificaciones Válidas</h2>        
                     <div className={styles.coverImage}>

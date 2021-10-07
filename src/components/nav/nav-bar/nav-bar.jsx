@@ -1,6 +1,6 @@
 import styles from './nav-bar.module.scss';
 import Link from 'next/link';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import NavButton from '../nav-button/nav-button';
 import NavIcon from '../nav-icon/nav-icon';
 

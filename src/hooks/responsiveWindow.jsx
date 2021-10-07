@@ -9,7 +9,7 @@ const useResponsiveWindow = () => {
     const handleWindowResize = useCallback((e) => {
             setWidth(window.innerWidth);
             setHeight(window.innerWidth);
-    }, [setWidth, setHeight]);
+    }, []);
     
     useEffect(() => {
         setWidth(window.innerWidth);
@@ -21,10 +21,9 @@ const useResponsiveWindow = () => {
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         };
-    }, [handleWindowResize]);
+    }, []);
 
     const isDesktop = useMemo(() => width >= DESKTOP_MIN[0] && height >= DESKTOP_MIN[1], [width, height]);
-
     return {
         width,
         height,

@@ -1,14 +1,11 @@
 import styles from './card.module.scss';
 import { useRef } from 'react';
 import useOnScreen from '../../hooks/intersectionObserver';
-import useResponsiveWindow from '../../hooks/responsiveWindow';
 import MagicComponent from "./../magic-component/magic-component";
 
 const Card = ({ path,text,title }) =>{
-    const { isDesktop } = useResponsiveWindow();
-    const distance = isDesktop ? "-200px" : "";
     const ref = useRef();
-    const onScreen = useOnScreen(ref, distance);
+    const onScreen = useOnScreen(ref, "");
     
     return (
         <div className={onScreen ? `${styles.box} ${styles.animationCard}` : styles.box}>
