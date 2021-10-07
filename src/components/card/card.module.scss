@@ -1,21 +1,27 @@
+     $color-background-1:var(--specialBlack);
+     $color-background-2:var(--specialBlack);
+     $radius: 15px;
      .box {
          margin: 0 0 5vh 5px;
          max-width: 250px;
          height: 400px;
          flex-grow: 3;
+         border-radius: $radius;
+         background-image: linear-gradient( 270deg, #cc6aa5, #3e91cc, #2dcca7);
+         background-size: 400% 400%;
          .card {
-             border-radius: 5px;
+             border-radius: $radius;
              width: 100%;
              height: 100%;
-             background-color: #fff;
              overflow: hidden;
              object-fit: cover;
          }
          .textContainer {
+             border-radius: $radius;
              position: relative;
              max-width: 100%;
              font-weight: bold;
-             height: 101%;
+             height: 100%;
              bottom: 101%;
              left: 0;
              -webkit-box-align: center;
@@ -33,85 +39,42 @@
              flex-direction: column;
              position: relative;
              padding: 10%;
-             text-shadow: 0 0 3px var(--blue), 0 0 7px var(--blue);
-             z-index: 9999;
+             background-color: $color-background-1;
              >* {
                  letter-spacing: 1px;
+                 color: var(--white);
              }
-             border-radius: 5px;
              h3 {
+                 text-shadow: 0 0 10px var(--specialDarkBlue), 0 0 10px var(--specialDarkBlue);
                  font-size: 18px;
                  line-height: normal;
                  font-weight: bold;
                  text-transform: uppercase;
-             }
-             &:hover {
-                 @extend .hoverCard;
-             }
-             &:not( :hover) {
-                 @extend .notHoverCard;
+                 color: var(--white);
              }
          }
      }
      
-     .blurred {
-         filter: blur(10px);
+     .animationCard {
+         -webkit-animation: animateIt 5s linear infinite both alternate;
+         animation: animateIt 5s linear infinite both alternate;
+         box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
      }
      
-     .hoverCard {
-         -webkit-animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-         animation: fade-in .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-         height: 100.5%;
-         border: 1px solid var(--specialBlue);
-         pointer-events: none;
-     }
-     
-     .notHoverCard {
-         -webkit-animation: fade-out .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-         animation: fade-out .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-         height: 100.5%;
-         pointer-events: none;
-     }
-     
-     @media (min-width: 1000px) {
-         .hoverCard {
-             pointer-events: all;
-             text-shadow: 0 0 3px var(--specialBlue), 0 0 7px var(--specialBlue);
-         }
-         .notHoverCard {
-             pointer-events: all;
-         }
-     }
-     
-     @-webkit-keyframes fade-in {
+     @-webkit-keyframes animateIt {
          0% {
-             color: var(--specialWhite);
-             background-color: var(--specialBlue);
+             background-position: 0% 50%
          }
          100% {
-             background-color: var(--specialWhite);
-             color: var(--blue);
+             background-position: 100% 50%
          }
      }
      
-     @-webkit-keyframes fade-out {
+     @-moz-keyframes animateIt {
          0% {
-             background-color: var(--specialWhite);
-             color: var(--specialBlue);
+             background-position: 0% 50%
          }
          100% {
-             background-color: var(--specialBlue);
-             color: var(--specialWhite);
-         }
-     }
-     
-     @keyframes fade-out {
-         0% {
-             background-color: var(--specialWhite);
-             color: var(--specialBlue);
-         }
-         100% {
-             background-color: var(--specialBlue);
-             color: var(--specialWhite);
+             background-position: 100% 50%
          }
      }

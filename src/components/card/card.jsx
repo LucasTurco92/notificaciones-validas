@@ -9,11 +9,11 @@ const Card = ({ path,text,title }) =>{
     const distance = isDesktop ? "-200px" : "";
     const ref = useRef();
     const onScreen = useOnScreen(ref, distance);
-
+    
     return (
-        <div className={styles.box}>
+        <div className={onScreen ? `${styles.box} ${styles.animationCard}` : styles.box}>
             <img className={styles.card} src={path}/>
-            <div className={!onScreen ? `${styles.textContainer} ${styles.blurred}` : styles.textContainer }>
+            <div className={styles.textContainer}>
                 <h3 ref={ref}>{title}</h3>
                 <MagicComponent>
                     <p className={styles.text}>{text}</p>

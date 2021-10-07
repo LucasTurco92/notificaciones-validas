@@ -30,8 +30,8 @@ p {
 :root {
     --blue: #1f5ca7;
     --specialBlue: RGBA(0, 153, 255, 0.52);
-    --specialBlack: RGBA(0, 0, 0, 0.6);
-    --specialWhite: RGBA(255, 255, 255, 0.6);
+    --specialBlack: rgba(16, 16, 16, 0.67);
+    --specialWhite: RGBA(255, 255, 255, 0.9);
     --fogBlack: RGBA(0, 0, 0, 0);
     --darkBlue: #515463;
     --violet: #201c2c;
@@ -41,8 +41,9 @@ p {
     --black: #1D1C1A;
     --solidBlack: #000;
     --specialViolet: rgba(32, 28, 44, .6);
-    --darkBlue: #4444dd;
-    --gradient-shadow: linear-gradient( 45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    --darkPurple: #4444dd;
+    --specialPurple: rgba(80, 70, 109, .9);
+    --specialDarkBlue: rgba(31, 92, 167, .7);
 }
 
 h2 {
